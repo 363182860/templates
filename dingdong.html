@@ -1,0 +1,462 @@
+<html><head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-dns-prefetch-control" content="on">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta content="telephone=no" name="format-detection">
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+        <title>整点限时抢-咚咚抢</title>
+        <meta name="Keywords" content="老虎淘客叮咚抢">
+        <meta name="Description" content="老虎淘客叮咚抢">
+        <link href="./css/web_common.css" rel="stylesheet">
+        <link href="./css/webshoufa.css" rel="stylesheet">
+         <script type="text/javascript" src="./js/satc.js" async=""></script>
+         <script type="text/javascript" src="./js/jquery.min.js"></script>
+        <script src="./js/lazyload.js"></script>
+        <!-- 皮肤 S-->
+                <!-- 皮肤 E-->
+    <style>
+        html {
+            background: none
+        }
+    </style></head>
+    
+    <body data-appid="1" data-in="1" data-ext-version="1.4.2">
+<div class="main-title clearfix theme-bg-color-1">
+            <a href="javascript:void(0)" class="main-back"></a>
+            <div class="menu-detail">
+                <span>整点限时抢-咚咚抢</span>
+            </div>
+            <a class="mui-action-menu main-home" href="./index.php?i=3&amp;c=entry&amp;pid=mm_13157221_17524774_63558203&amp;dluid=&amp;do=index&amp;m=tiger_newhu"></a>
+        </div>
+
+        <!-- 主界面具体展示内容 -->
+        
+<script src="./js/swiper.jquery.js"></script>
+<link rel="stylesheet" href="./css/swiper.css">
+
+<style>
+    .goods-block{
+        width: 94%;
+        padding:0 3%;
+        background-color: #fff;
+        /*min-height: 800px;*/
+    }
+    .goods-list{
+        width: 100%;
+        padding: 15px 0;
+        border-bottom: 1px solid #eee;
+        /*border: 1px solid red;*/
+        display: block;
+    }
+    .goods-list:last-child {
+        border-bottom: none;
+    }
+    .gl-img{
+        /*width: 120px;*/
+        /*height: 120px;*/
+        width: 35%;
+        vertical-align: middle;
+        float: left;
+    }
+    .gl-content{
+        height: 120px;
+        width: 60%;
+        margin-left: 3%;
+        float: left;
+        text-align: left;
+        font-family: "Microsoft yahei";
+    }
+    .glc-title{
+        font-size: 1em;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        color: #333;
+    }
+    .glc-des{
+        font-size: 0.9em;
+        color: #FF7580;
+        overflow: hidden;
+        text-align: justify;
+    }
+    .yhq{
+        width:50px;
+        height: 18px;
+        background-color: #FF9960;
+        float: left;
+    }
+    .zsz{
+        font-size: 0.7em;
+        border: 1px solid #FF9960;
+        color: #FF9960;
+        float: left;
+        margin-left: 3%;
+        padding:0 3px;
+    }
+    .hasq{
+        font-size: 0.7em;
+        float: right;
+        color: #aaa;
+    }
+    .hasq span{
+        color: #FF9960;
+        font-family: Arial;
+    }
+    .cf{
+        clear: both;
+    }
+    .glc-price{
+        font-size: 1.1em;
+        color: #df2434;
+        float: left;
+        font-family: Arial;
+        font-weight:bold;
+    }
+    .priceNum{
+        font-size: 1.1em!important;
+        color: #df2434!important;
+        font-family: Arial!important;
+        font-weight:bold!important;
+    }
+    .glc-price span{
+        color: #aaa;
+        font-size: 0.7em;
+        font-weight: normal;
+    }
+    .glc-btn {
+        float: right;
+        background-color: #df2434;
+        color: #fff;
+        text-align: center;
+        border-radius: ;
+    }
+    .glc-zdt{
+        clear: both;
+        height:20px;
+    }
+    .gl-bot{
+        margin: 5px 0;
+    }
+    .swiper-container {
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
+    .qunjine{
+        display: inline-block;
+        margin-left:-2px;
+        font-family: Arial;
+    }
+    .ykq{
+        width: 25%;
+        margin-top: 10px;
+        text-align: center;
+        font-size: 1em;
+        float: left;
+    }
+    .ykq p{
+        font-size: 0.7em;
+        color: #999;
+    }
+
+    .swiper-slide{
+        text-align: center;
+        vertical-align: middle;
+        padding-top: 10px;
+        color: #fff!important;
+        font-family:Arial;
+    }
+    .swiper-slide p{
+        font-size: 12px;
+        color: #999;
+        font-family: "Microsoft yahei";
+        margin-top: -1px;
+    }
+    .perple{
+        width: 25%;height: 100%;background-color: #A928F2;position: absolute;bottom: 0
+    }
+    .perple i{
+        border-top: 8px solid #A928F2;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        margin-left: -10px
+    }
+    .goods_coupon {
+        position: relative;
+        /*width: 50px;*/
+        padding: 0 5px;
+        height: 18px;
+        background: #FF9960;
+        border-radius: 2px;
+        line-height: 18px;
+        text-align: center;
+        font-size: 12px;
+        color: white;
+        float: left;
+    }
+    .clb{
+        position: absolute;
+        width: 6px;
+        background-color: #fff;
+        border-radius: 100%;
+        margin-top: -3px;
+        top: 50%;
+        height: 6px;
+    }
+    .c_l{
+        left: -3px;
+    }
+    .c_r{
+       right:-3px;
+    }
+    .mylist{
+        display: none;
+    }
+    .fixed{
+        position: fixed;
+        top:44px;
+    }
+    .wap-navTime{
+        z-index: 9999;
+    }
+    @media screen and (max-width : 320px) {
+        .wap-banner{
+            width: 100%;/*height: 90px;*/margin-top: 44px;
+        }
+        .wap-navTime {
+            width: 100%;  height: 45px;  background-color: #333;  color: #fff;
+        }
+        .swiper-slide{
+            font-size: 1em;padding-top: 5px;
+        }
+        .goods-list{
+            height: 100px;
+        }
+        .gl-content{
+            font-size: 14px;
+        }
+        .glc-des{
+            height: 32px;
+            margin: 6px 0;
+        }
+        .glc-btn{
+            width: 58px;
+            height: 19px;
+            line-height: 19px;
+            font-size: 0.7em;
+        }
+    }
+    @media screen and (min-width: 321px) and (max-width : 375px) {
+        .wap-banner{
+            width: 100%;/*height: 110px;*/margin-top: 44px;
+        }
+        .wap-navTime {
+            width: 100%;  height: 50px;  background-color: #333;  color: #fff;
+        }
+        .swiper-slide{
+            font-size: 1.1em;padding-top: 7px;
+        }
+        .goods-list{
+            height: 120px;
+        }
+        .gl-content{
+            font-size: 16px;
+        }
+        .glc-des{
+            height: 45px;
+            margin: 6px 0;
+        }
+        .glc-btn{
+            width: 65px;
+            height: 22px;
+            line-height: 22px;
+            font-size: 0.7em;
+        }
+    }
+    @media screen and (min-width: 376px) {
+        .wap-banner{
+            width: 100%;/*height: 130px;*/margin-top: 44px;
+        }
+        .wap-navTime {
+            width: 100%;  height: 60px;  background-color: #333;  color: #fff;
+        }
+        .swiper-slide{
+            font-size: 1.2em;padding-top: 11px;
+        }
+        .goods-list{
+            height: 136px;
+        }
+        .gl-content{
+            font-size: 18px;
+        }
+        .glc-des{
+            height: 54px;
+            margin: 6px 0;
+        }
+        .glc-btn{
+            width: 70px;
+            height: 25px;
+            line-height: 25px;
+            font-size: 0.8em;
+        }
+    }
+    .hasNogoods {
+        text-align: center;
+        color: #999;
+        font-size: 14px;
+        padding: 40px 0;
+    }
+</style>
+
+
+
+<div class="wap-banner">
+    <img style="display: block;" width="100%" src="http://www.auiju.cn/addons/tiger_newhu/template/mobile/tbgoods/style99/imgs/ddq_banners.jpg" alt="">
+</div>
+<div class="wap-navTime">
+<!--    <span class="perple"><i></i></span>-->
+    <div class="swiper-container swiper-container-horizontal">
+        <div class="swiper-wrapper" style="width: 50%;">
+
+                <!--<a href="javascript:;" class="swiper-slide" data-type="1700" data-check="0"  data-types="1">
+                   昨日
+                </a>-->
+                <a style="background-color: rgb(169, 40, 242); width: 103.5px;" href="./index.php?i=3&amp;c=entry&amp;hdtype=1&amp;dluid=&amp;pid=mm_13157221_17524774_63558203&amp;do=ddq&amp;m=tiger_newhu" class="swiper-slide swiper-slide-active" data-type="1708" data-check="0" data-types="1">
+                    09:00 <p style="color: rgb(255, 255, 255);">已开抢</p>
+                </a>
+                <a href="./index.php?i=3&amp;c=entry&amp;hdtype=2&amp;dluid=&amp;pid=mm_13157221_17524774_63558203&amp;do=ddq&amp;m=tiger_newhu" class="swiper-slide swiper-slide-next" data-type="1710" data-check="0" data-types="1" style="width: 103.5px;">
+                    13:00<p "="">即将开始</p>
+                </a>
+                <a href="./index.php?i=3&amp;c=entry&amp;hdtype=3&amp;dluid=&amp;pid=mm_13157221_17524774_63558203&amp;do=ddq&amp;m=tiger_newhu" class="swiper-slide" data-type="1713" data-check="0" data-types="1" style="width: 103.5px;">
+                    19:00<p "="">即将开始</p>
+                </a>
+                <a href="./index.php?i=3&amp;c=entry&amp;hdtype=4&amp;dluid=&amp;pid=mm_13157221_17524774_63558203&amp;do=ddq&amp;m=tiger_newhu" class="swiper-slide" data-type="1713" data-check="0" data-types="1" style="width: 103.5px;">
+                    21:00<p "="">即将开始</p>
+                </a>
+  
+        </div>
+    </div>
+</div>
+
+<script language="javascript">
+    //$(".swiper-slide[data-check='1']").css("backgroundColor","#A928F2");
+   // $(".swiper-slide[data-check='1']").find("p").css("color","#fff");
+    var creIndex = $(".swiper-slide[data-check='1']").index()-1;
+    var mySwiper = new Swiper('.swiper-container',{
+        direction:"horizontal",
+        slidesPerView:4,
+        initialSlide :creIndex,
+    })
+    $('.swiper-slide').click(function(){
+        mySwiper.slideTo(parseInt(mySwiper.clickedIndex-1), 1000, false)
+    })
+
+//
+//  $(".swiper-slide").click(function(){
+//      $(".swiper-slide").css("backgroundColor","#333");
+//      $(".swiper-slide").find("p").css("color","#999")
+//      $(this).css("backgroundColor","#A928F2");
+//      $(this).find("p").css("color","#fff")
+//  });
+</script>
+
+
+
+<div class="goods-block" id="table">
+    <div id="test"></div>
+    <div id="list">
+    	<!--<a href="/index.php?r=l/d&id=4129426&nav_wrap=ddq" class="goods-list my-goods-list">
+	        <img class="gl-img" src="https://img.alicdn.com/imgextra/i4/1885672960/TB23wOIoSBjpuFjSsplXXa5MVXa_!!1885672960.jpg_240x240.jpg" alt="">
+	        <div class="gl-content">
+	            <p class="glc-title">【红粉女王】性感婚纱隐形内衣2件装</p>
+	            <p class="glc-des">三种颜色随心选，秀出性感美肩【赠运费险】</p>
+	            <div class="glc-zdt">
+	
+	                <div class="goods_coupon"><span class="c_l clb"></span><span class="c_r clb"></span><span>券 ￥</span><span class="qunjine">5</span></div>
+	                                <span class="zsz">折上折</span>
+	                                <p class="hasq">已抢<span>6244</span>件</p>
+	            </div>
+	            <div class="cf gl-bot">
+	                <p class="glc-price">￥ <span class="priceNum">33</span> <span> 券后</span></p>
+	                <div class="glc-btn">马上抢</div>
+	            </div>
+	        </div>
+	    </a>-->
+	    
+    <a href="./index.php?i=3&amp;c=entry&amp;do=view&amp;m=tiger_newhu&amp;lm=2&amp;itemid=558961540353&amp;pid=mm_13157221_17524774_63558203&amp;dluid=" class="goods-list my-goods-list"><img class="gl-img" src="https://img.alicdn.com/imgextra/i1/295108743/TB2CUiVg_nI8KJjSszgXXc8ApXa_!!295108743.jpg_240x240.jpg" alt=""><div class="gl-content"> <p class="glc-title">艾利莱桑蚕丝丝巾渐变色大规格丝巾经典百搭丝巾亲肤保暖</p><p class="glc-des" style="line-height: 25px;">【桑蚕丝】大规格200*135cm，亲肤百搭，时尚新款，多色可选！</p><div class="glc-zdt"><div class="goods_coupon"><span class="c_l clb"></span><span class="c_r clb"></span><span>券 ￥</span><span class="qunjine">30</span></div><span class="zsz">折上折</span><p class="hasq">已抢<span>42</span>件</p></div><div class="cf gl-bot"><p class="glc-price">￥ <span class="priceNum">39.9</span> <span> 券后</span></p><div class="glc-btn">马上抢</div> </div> </div> </a><a href="./index.php?i=3&amp;c=entry&amp;do=view&amp;m=tiger_newhu&amp;lm=2&amp;itemid=561313756941&amp;pid=mm_13157221_17524774_63558203&amp;dluid=" class="goods-list my-goods-list"><img class="gl-img" src="https://img.alicdn.com/imgextra/i3/295108743/TB2C7GOaAfb_uJkHFNRXXc3vpXa_!!295108743.jpg_240x240.jpg" alt=""><div class="gl-content"> <p class="glc-title">菲雪利 羊毛保暖围巾格纹男女通用大规格时尚气质围巾披肩两用</p><p class="glc-des" style="line-height: 25px;">杨幂等众多明星同款，加密羊毛材质，双倍保暖，柔软细腻，薄厚适中，超多款可选【送运费险】</p><div class="glc-zdt"><div class="goods_coupon"><span class="c_l clb"></span><span class="c_r clb"></span><span>券 ￥</span><span class="qunjine">110</span></div><span class="zsz">折上折</span><p class="hasq">已抢<span>156</span>件</p></div><div class="cf gl-bot"><p class="glc-price">￥ <span class="priceNum">29.9</span> <span> 券后</span></p><div class="glc-btn">马上抢</div> </div> </div> </a><a href="./index.php?i=3&amp;c=entry&amp;do=view&amp;m=tiger_newhu&amp;lm=2&amp;itemid=546686742653&amp;pid=mm_13157221_17524774_63558203&amp;dluid=" class="goods-list my-goods-list"><img class="gl-img" src="https://img.alicdn.com/imgextra/i4/2104979870/TB29jBphcnI8KJjSsziXXb8QpXa-2104979870.jpg_240x240.jpg" alt=""><div class="gl-content"> <p class="glc-title">Dejojoez法国玖玖玫瑰水光素颜霜50g补水保湿v7懒人霜提亮裸妆女</p><p class="glc-des" style="line-height: 25px;">懒人素颜霜，亮泽肤色，自带美颜，无需卸妆，补水滋润，一抹明亮，适合各种肤质，尤其是肤色不均的肌肤</p><div class="glc-zdt"><div class="goods_coupon"><span class="c_l clb"></span><span class="c_r clb"></span><span>券 ￥</span><span class="qunjine">35</span></div><span class="zsz">折上折</span><p class="hasq">已抢<span>351</span>件</p></div><div class="cf gl-bot"><p class="glc-price">￥ <span class="priceNum">14.9</span> <span> 券后</span></p><div class="glc-btn">马上抢</div> </div> </div> </a><a href="./index.php?i=3&amp;c=entry&amp;do=view&amp;m=tiger_newhu&amp;lm=2&amp;itemid=559318617016&amp;pid=mm_13157221_17524774_63558203&amp;dluid=" class="goods-list my-goods-list"><img class="gl-img" src="https://img.alicdn.com/imgextra/i2/3023227395/TB2ZIiHd_nI8KJjSszbXXb4KFXa_!!3023227395.jpg_240x240.jpg" alt=""><div class="gl-content"> <p class="glc-title">暖脚宝插电电暖鞋暖脚器加热暖脚垫卡通毛绒电热保暖鞋办公室神器</p><p class="glc-des" style="line-height: 25px;">PTC发热，快速升温，三档调节，安全零辐射。超柔短毛绒，可拆洗外套，多色可选。您身边的贴身保暖管家~</p><div class="glc-zdt"><div class="goods_coupon"><span class="c_l clb"></span><span class="c_r clb"></span><span>券 ￥</span><span class="qunjine">15</span></div><span class="zsz">折上折</span><p class="hasq">已抢<span>30083</span>件</p></div><div class="cf gl-bot"><p class="glc-price">￥ <span class="priceNum">24.9</span> <span> 券后</span></p><div class="glc-btn">马上抢</div> </div> </div> </a><a href="./index.php?i=3&amp;c=entry&amp;do=view&amp;m=tiger_newhu&amp;lm=2&amp;itemid=537564529383&amp;pid=mm_13157221_17524774_63558203&amp;dluid=" class="goods-list my-goods-list"><img class="gl-img" src="https://img.alicdn.com/imgextra/i1/403528430/TB2GQPzfiqAXuNjy1XdXXaYcVXa_!!403528430.jpg_240x240.jpg" alt=""><div class="gl-content"> <p class="glc-title">婴儿帽子春秋0-3-6-12个月男童女宝宝帽子秋冬季新生儿保暖毛线帽</p><p class="glc-des" style="line-height: 25px;">面料柔软，不扎皮肤，舒适透气，触感细腻，保护宝贝头部，萌宝必备，千万妈妈的选择！</p><div class="glc-zdt"><div class="goods_coupon"><span class="c_l clb"></span><span class="c_r clb"></span><span>券 ￥</span><span class="qunjine">3</span></div><span class="zsz">折上折</span><p class="hasq">已抢<span>49893</span>件</p></div><div class="cf gl-bot"><p class="glc-price">￥ <span class="priceNum">13.0</span> <span> 券后</span></p><div class="glc-btn">马上抢</div> </div> </div> </a><a href="./index.php?i=3&amp;c=entry&amp;do=view&amp;m=tiger_newhu&amp;lm=2&amp;itemid=546084608834&amp;pid=mm_13157221_17524774_63558203&amp;dluid=" class="goods-list my-goods-list"><img class="gl-img" src="https://img.alicdn.com/imgextra/i4/1092900755/TB2RqAqz.dnpuFjSZPhXXbChpXa_!!1092900755.jpg_240x240.jpg" alt=""><div class="gl-content"> <p class="glc-title">加厚耐热玻璃杯家用套装水杯茶杯透明酒杯泡茶把杯带杯架托盘杯子</p><p class="glc-des" style="line-height: 25px;">经典家用套装，耐热耐高温，高品质把杯，工匠手工印记，品质保证。</p><div class="glc-zdt"><div class="goods_coupon"><span class="c_l clb"></span><span class="c_r clb"></span><span>券 ￥</span><span class="qunjine">3</span></div><span class="zsz">折上折</span><p class="hasq">已抢<span>1414</span>件</p></div><div class="cf gl-bot"><p class="glc-price">￥ <span class="priceNum">16.9</span> <span> 券后</span></p><div class="glc-btn">马上抢</div> </div> </div> </a><a href="./index.php?i=3&amp;c=entry&amp;do=view&amp;m=tiger_newhu&amp;lm=2&amp;itemid=26412256175&amp;pid=mm_13157221_17524774_63558203&amp;dluid=" class="goods-list my-goods-list"><img class="gl-img" src="https://img.alicdn.com/imgextra/i4/2253115610/TB2MgvFX2DH8KJjy1XcXXcpdXXa_!!2253115610.jpg_240x240.jpg" alt=""><div class="gl-content"> <p class="glc-title">正品索芙特洗发水 清爽去屑洗发露 控油针对头痒油性发质</p><p class="glc-des" style="line-height: 25px;">大牌品质保障，精选优质原料，控油清爽，温和调理，深层滋润发根，购买750g送修复乳！</p><div class="glc-zdt"><div class="goods_coupon"><span class="c_l clb"></span><span class="c_r clb"></span><span>券 ￥</span><span class="qunjine">10</span></div><span class="zsz">折上折</span><p class="hasq">已抢<span>1427</span>件</p></div><div class="cf gl-bot"><p class="glc-price">￥ <span class="priceNum">8.8</span> <span> 券后</span></p><div class="glc-btn">马上抢</div> </div> </div> </a><a href="./index.php?i=3&amp;c=entry&amp;do=view&amp;m=tiger_newhu&amp;lm=2&amp;itemid=561862977798&amp;pid=mm_13157221_17524774_63558203&amp;dluid=" class="goods-list my-goods-list"><img class="gl-img" src="https://img.alicdn.com/imgextra/i4/2206301005/TB2WMNJgDTI8KJjSsphXXcFppXa_!!2206301005.jpg_240x240.jpg" alt=""><div class="gl-content"> <p class="glc-title">南极人女童打底裤加绒加厚女秋冬季外穿儿童裤宝宝保暖棉裤子冬装</p><p class="glc-des" style="line-height: 25px;">高密度保暖绒，双层加厚，保暖加倍，高腰设计，弹力不紧绷，冬季只要这一条就够了！</p><div class="glc-zdt"><div class="goods_coupon"><span class="c_l clb"></span><span class="c_r clb"></span><span>券 ￥</span><span class="qunjine">10</span></div><span class="zsz">折上折</span><p class="hasq">已抢<span>8768</span>件</p></div><div class="cf gl-bot"><p class="glc-price">￥ <span class="priceNum">49.8</span> <span> 券后</span></p><div class="glc-btn">马上抢</div> </div> </div> </a><a href="./index.php?i=3&amp;c=entry&amp;do=view&amp;m=tiger_newhu&amp;lm=2&amp;itemid=530547814809&amp;pid=mm_13157221_17524774_63558203&amp;dluid=" class="goods-list my-goods-list"><img class="gl-img" src="https://img.alicdn.com/bao/uploaded/i4/2400410336/TB13xcaaBfM8KJjSZPiXXXdspXa_!!0-item_pic.jpg_240x240.jpg" alt=""><div class="gl-content"> <p class="glc-title">秋冬女鞋大码高帮帆布鞋女41-43学生运动休闲鞋加绒厚底板鞋棉鞋</p><p class="glc-des" style="line-height: 25px;">情侣潮流款，多色可选，舒适鞋面，干爽内里，防滑鞋底，柔软性能，时尚情侣休闲鞋.</p><div class="glc-zdt"><div class="goods_coupon"><span class="c_l clb"></span><span class="c_r clb"></span><span>券 ￥</span><span class="qunjine">10</span></div><span class="zsz">折上折</span><p class="hasq">已抢<span>1851</span>件</p></div><div class="cf gl-bot"><p class="glc-price">￥ <span class="priceNum">68.0</span> <span> 券后</span></p><div class="glc-btn">马上抢</div> </div> </div> </a><a href="./index.php?i=3&amp;c=entry&amp;do=view&amp;m=tiger_newhu&amp;lm=2&amp;itemid=560062616334&amp;pid=mm_13157221_17524774_63558203&amp;dluid=" class="goods-list my-goods-list"><img class="gl-img" src="https://img.alicdn.com/imgextra/i4/924075671/TB2XO9bcFHM8KJjSZJiXXbx3FXa_!!924075671.jpg_240x240.jpg" alt=""><div class="gl-content"> <p class="glc-title">休闲运动套装女秋冬新款加绒加厚长袖韩版修身卫衣两件套运动服潮</p><p class="glc-des" style="line-height: 25px;">【赠运费险】甄选优质面料，清爽舒适，气质减龄，历经32次打版，黄金比例4D立体剪裁，修身显瘦，精工制作，尽显魅力工艺！</p><div class="glc-zdt"><div class="goods_coupon"><span class="c_l clb"></span><span class="c_r clb"></span><span>券 ￥</span><span class="qunjine">20</span></div><span class="zsz">折上折</span><p class="hasq">已抢<span>331</span>件</p></div><div class="cf gl-bot"><p class="glc-price">￥ <span class="priceNum">49.9</span> <span> 券后</span></p><div class="glc-btn">马上抢</div> </div> </div> </a><a href="./index.php?i=3&amp;c=entry&amp;do=view&amp;m=tiger_newhu&amp;lm=2&amp;itemid=561579154930&amp;pid=mm_13157221_17524774_63558203&amp;dluid=" class="goods-list my-goods-list"><img class="gl-img" src="https://img.alicdn.com/imgextra/i1/2076683139/TB2k_FBdwfH8KJjy1zcXXcTzpXa_!!2076683139.jpg_240x240.jpg" alt=""><div class="gl-content"> <p class="glc-title">欧购2017冬季新款韩版宽松显瘦中长款军绿色羽绒服加厚保暖外套女</p><p class="glc-des" style="line-height: 25px;">优质白鸭绒，蓬松饱满，温暖亲肤，潮流面包服设计，版型时尚，修身显瘦，让温暖陪伴左右，清仓亏本，库存不多~</p><div class="glc-zdt"><div class="goods_coupon"><span class="c_l clb"></span><span class="c_r clb"></span><span>券 ￥</span><span class="qunjine">100</span></div><span class="zsz">折上折</span><p class="hasq">已抢<span>354</span>件</p></div><div class="cf gl-bot"><p class="glc-price">￥ <span class="priceNum">198.0</span> <span> 券后</span></p><div class="glc-btn">马上抢</div> </div> </div> </a><a href="./index.php?i=3&amp;c=entry&amp;do=view&amp;m=tiger_newhu&amp;lm=2&amp;itemid=559559045840&amp;pid=mm_13157221_17524774_63558203&amp;dluid=" class="goods-list my-goods-list"><img class="gl-img" src="https://img.alicdn.com/imgextra/i3/86647029/TB24rFPhNHI8KJjy1zbXXaxdpXa_!!86647029.jpg_240x240.jpg" alt=""><div class="gl-content"> <p class="glc-title">霸王育发液60ml增发密发防脱发生发快速增长液男女毛囊营养精华液</p><p class="glc-des" style="line-height: 25px;">天然草本提取，快速增长密发，控油防脱，固发滋养毛囊，专柜正品，送一瓶80ml育发洗发液！</p><div class="glc-zdt"><div class="goods_coupon"><span class="c_l clb"></span><span class="c_r clb"></span><span>券 ￥</span><span class="qunjine">15</span></div><span class="zsz">折上折</span><p class="hasq">已抢<span>308</span>件</p></div><div class="cf gl-bot"><p class="glc-price">￥ <span class="priceNum">47.0</span> <span> 券后</span></p><div class="glc-btn">马上抢</div> </div> </div> </a><a href="./index.php?i=3&amp;c=entry&amp;do=view&amp;m=tiger_newhu&amp;lm=2&amp;itemid=561775720926&amp;pid=mm_13157221_17524774_63558203&amp;dluid=" class="goods-list my-goods-list"><img class="gl-img" src="https://img.alicdn.com/imgextra/i3/3071560147/TB2xYofeL6H8KJjSspmXXb2WXXa_!!3071560147.jpg_240x240.jpg" alt=""><div class="gl-content"> <p class="glc-title">脚气膏治脚气真菌感染脚气喷剂止痒脱皮脚臭脚痒泡脚粉足光粉</p><p class="glc-des" style="line-height: 25px;">官方品质保证，脚汗脚臭瘙痒脱皮，统统搞定！纯植物萃取，安全放心，轻轻一喷，远离脚气困扰，脚气人气组合效果看得见！</p><div class="glc-zdt"><div class="goods_coupon"><span class="c_l clb"></span><span class="c_r clb"></span><span>券 ￥</span><span class="qunjine">50</span></div><span class="zsz">折上折</span><p class="hasq">已抢<span>79</span>件</p></div><div class="cf gl-bot"><p class="glc-price">￥ <span class="priceNum">9.9</span> <span> 券后</span></p><div class="glc-btn">马上抢</div> </div> </div> </a><a href="./index.php?i=3&amp;c=entry&amp;do=view&amp;m=tiger_newhu&amp;lm=2&amp;itemid=543198399733&amp;pid=mm_13157221_17524774_63558203&amp;dluid=" class="goods-list my-goods-list"><img class="gl-img" src="https://img.alicdn.com/imgextra/i3/823258756/TB2_40OeY_0UKFjy1XaXXbKfXXa_!!823258756.jpg_240x240.jpg" alt=""><div class="gl-content"> <p class="glc-title">Artmi阿特密包包女2017新款潮韩版百搭斜挎包女小手提单肩包女包</p><p class="glc-des" style="line-height: 25px;">Artmi阿特密Artmi阿特密新款百搭单肩包，优质PU面料，手感柔软，质感五金，时尚百搭，轻盈便携，让你的出现更加时尚，尽显你的魅力</p><div class="glc-zdt"><div class="goods_coupon"><span class="c_l clb"></span><span class="c_r clb"></span><span>券 ￥</span><span class="qunjine">20</span></div><span class="zsz">折上折</span><p class="hasq">已抢<span>704</span>件</p></div><div class="cf gl-bot"><p class="glc-price">￥ <span class="priceNum">149.0</span> <span> 券后</span></p><div class="glc-btn">马上抢</div> </div> </div> </a><a href="./index.php?i=3&amp;c=entry&amp;do=view&amp;m=tiger_newhu&amp;lm=2&amp;itemid=560230824398&amp;pid=mm_13157221_17524774_63558203&amp;dluid=" class="goods-list my-goods-list"><img class="gl-img" src="http://img.alicdn.com/bao/uploaded/i1/3190833511/TB2iRtjkLxNTKJjy0FjXXX6yVXa_!!3190833511.jpg_240x240.jpg" alt=""><div class="gl-content"> <p class="glc-title">高领毛衣女套头宽松中长款韩版2017秋冬新款焦糖色长袖百搭打底衫</p><p class="glc-des" style="line-height: 25px;">精选加厚高档针织面料，手感舒适，保暖倍加，螺纹袖子，百搭时尚，穿着起来展现你的优雅贤淑，秒变女神原来那么简单！【赠运费险】</p><div class="glc-zdt"><div class="goods_coupon"><span class="c_l clb"></span><span class="c_r clb"></span><span>券 ￥</span><span class="qunjine">20</span></div><span class="zsz">折上折</span><p class="hasq">已抢<span>957</span>件</p></div><div class="cf gl-bot"><p class="glc-price">￥ <span class="priceNum">68.0</span> <span> 券后</span></p><div class="glc-btn">马上抢</div> </div> </div> </a><a href="./index.php?i=3&amp;c=entry&amp;do=view&amp;m=tiger_newhu&amp;lm=2&amp;itemid=553501902416&amp;pid=mm_13157221_17524774_63558203&amp;dluid=" class="goods-list my-goods-list"><img class="gl-img" src="https://img.alicdn.com/imgextra/i2/2453193078/TB24.njaE3iyKJjy1zeXXbxZFXa_!!2453193078.jpg_240x240.jpg" alt=""><div class="gl-content"> <p class="glc-title">干衣机家用静音省电双层小型迷你多功能暖风宝宝烘衣速干烘干机器</p><p class="glc-des" style="line-height: 25px;">不锈钢加粗管，1000W大功率，双层加大空间，高温杀菌，防水阻燃更安全，安装简单，一机多用，还你阳光，让你每天好心情【赠运费险】</p><div class="glc-zdt"><div class="goods_coupon"><span class="c_l clb"></span><span class="c_r clb"></span><span>券 ￥</span><span class="qunjine">30</span></div><span class="zsz">折上折</span><p class="hasq">已抢<span>5982</span>件</p></div><div class="cf gl-bot"><p class="glc-price">￥ <span class="priceNum">69.0</span> <span> 券后</span></p><div class="glc-btn">马上抢</div> </div> </div> </a><a href="./index.php?i=3&amp;c=entry&amp;do=view&amp;m=tiger_newhu&amp;lm=2&amp;itemid=558279805611&amp;pid=mm_13157221_17524774_63558203&amp;dluid=" class="goods-list my-goods-list"><img class="gl-img" src="https://img.alicdn.com/imgextra/i1/829636553/TB2gi46km3PL1JjSZFtXXclRVXa_!!829636553.jpg_240x240.jpg" alt=""><div class="gl-content"> <p class="glc-title">冬装保暖立领长袖格子衬衫加绒针织外套 加厚假两件针织衫女开衫</p><p class="glc-des" style="line-height: 25px;">天猫正品，采用优质棉花，不起球不变形，舒适透气不紧绷，告别闷汗，让您的冬天充满暖流。</p><div class="glc-zdt"><div class="goods_coupon"><span class="c_l clb"></span><span class="c_r clb"></span><span>券 ￥</span><span class="qunjine">40</span></div><span class="zsz">折上折</span><p class="hasq">已抢<span>53</span>件</p></div><div class="cf gl-bot"><p class="glc-price">￥ <span class="priceNum">49.9</span> <span> 券后</span></p><div class="glc-btn">马上抢</div> </div> </div> </a><a href="./index.php?i=3&amp;c=entry&amp;do=view&amp;m=tiger_newhu&amp;lm=2&amp;itemid=561504397517&amp;pid=mm_13157221_17524774_63558203&amp;dluid=" class="goods-list my-goods-list"><img class="gl-img" src="https://img.alicdn.com/imgextra/i3/2076683139/TB21i4gaVLM8KJjSZFBXXXJHVXa_!!2076683139.jpg_240x240.jpg" alt=""><div class="gl-content"> <p class="glc-title">欧购2017秋冬新款韩版宽松显瘦焦糖色呢子大衣短款茧型毛呢外套女</p><p class="glc-des" style="line-height: 25px;">原创设计，高档毛呢面料，轻柔舒适，宽松韩版，气质显瘦，利落短款，不挑身材，个性百搭，穿出满满时尚感！</p><div class="glc-zdt"><div class="goods_coupon"><span class="c_l clb"></span><span class="c_r clb"></span><span>券 ￥</span><span class="qunjine">100</span></div><span class="zsz">折上折</span><p class="hasq">已抢<span>348</span>件</p></div><div class="cf gl-bot"><p class="glc-price">￥ <span class="priceNum">178.0</span> <span> 券后</span></p><div class="glc-btn">马上抢</div> </div> </div> </a><a href="./index.php?i=3&amp;c=entry&amp;do=view&amp;m=tiger_newhu&amp;lm=2&amp;itemid=559181947102&amp;pid=mm_13157221_17524774_63558203&amp;dluid=" class="goods-list my-goods-list"><img class="gl-img" src="http://img.alicdn.com/imgextra/i4/2076347396/TB1XcA9dNPI8KJjSspoXXX6MFXa_!!0-item_pic.jpg_240x240.jpg" alt=""><div class="gl-content"> <p class="glc-title">菲雪利桑蚕丝丝巾17年百搭新款纯色大规格真丝丝巾围巾披肩两用</p><p class="glc-des" style="line-height: 25px;">新款百搭2017秋冬季韩版真丝围巾，采用优质桑蚕丝，尺寸更大，光泽度更强，多种款式任亲挑选。</p><div class="glc-zdt"><div class="goods_coupon"><span class="c_l clb"></span><span class="c_r clb"></span><span>券 ￥</span><span class="qunjine">50</span></div><span class="zsz">折上折</span><p class="hasq">已抢<span>95</span>件</p></div><div class="cf gl-bot"><p class="glc-price">￥ <span class="priceNum">29.9</span> <span> 券后</span></p><div class="glc-btn">马上抢</div> </div> </div> </a><a href="./index.php?i=3&amp;c=entry&amp;do=view&amp;m=tiger_newhu&amp;lm=2&amp;itemid=557757760461&amp;pid=mm_13157221_17524774_63558203&amp;dluid=" class="goods-list my-goods-list"><img class="gl-img" src="https://img.alicdn.com/imgextra/i2/3356901844/TB2fDJeaTZRMeJjSsppXXXrEpXa_!!3356901844.jpg_240x240.jpg" alt=""><div class="gl-content"> <p class="glc-title">康采好脸面复合维生素E霜补水保湿EC润肤秋冬护肤60g正品送运费险</p><p class="glc-des" style="line-height: 25px;">蕴含维生素E滋养成份，防止皮肤粗糙，保湿补水，温和舒适，使皮肤细腻有光泽，柔嫩又细滑，开启肌肤的水润Q弹之旅！【加送试用装+赠运费险】</p><div class="glc-zdt"><div class="goods_coupon"><span class="c_l clb"></span><span class="c_r clb"></span><span>券 ￥</span><span class="qunjine">25</span></div><span class="zsz">折上折</span><p class="hasq">已抢<span>881</span>件</p></div><div class="cf gl-bot"><p class="glc-price">￥ <span class="priceNum">10.0</span> <span> 券后</span></p><div class="glc-btn">马上抢</div> </div> </div> </a></div>
+    <!--<p class="hasNogoods">本场次商品已经加载完毕啦 ￣O￣)ノ</p>-->
+<div class="layui-flow-more">本场次商品已经加载完毕啦 ￣O￣)ノ！</div></div>
+
+
+<link href="./css/layui.css" rel="stylesheet">
+<script src="./js/layui.js" charset="utf-8"></script>
+<style>
+.layui-flow-more a i{color:#ff006c;}
+</style>
+<script type="text/javascript">
+		    ;!function(){
+		        layui.use('flow', function(){
+		            var $ = layui.jquery;
+		            var flow = layui.flow;
+		            var pid="mm_13157221_17524774_63558203";
+		            var dluid="";
+		            var lbratetype="0";
+		            var kj="1";
+
+		            
+		            flow.load({
+		                elem: '#table'
+                        ,end: '本场次商品已经加载完毕啦 ￣O￣)ノ！'
+		                ,done: function(page, next){
+		                    var lis =[];
+                            var tmpl='';
+		                    $.get("./index.php?i=3&c=entry&hdtype=1&hd=4&do=ddq&m=tiger_newhu&page="+page, function(res){
+		                    	res=JSON.parse(res);
+		                    	
+		                    	
+		                        layui.each(res.data, function(index, item){
+		                        	//if(kj==1){
+		                        		tmpl+='<a href="./index.php?i=3&c=entry&do=view&m=tiger_newhu'+'&lm=2&itemid='+item.itemid+'&pid='+pid+'&dluid='+dluid+'" class="goods-list my-goods-list">'; 
+		                        	//}else{
+		                        	//	tmpl+='<a href="javascript:void(0)" class="goods-list my-goods-list">'; 
+		                        	//}
+									        tmpl+='<img class="gl-img" src="'+item.itempic+'_240x240.jpg" alt="">'; 
+									        tmpl+='<div class="gl-content">'; 
+									           tmpl+=' <p class="glc-title">'+item.itemtitle+'</p>'; 
+									            tmpl+='<p class="glc-des" style="line-height: 25px;">'+item.itemdesc+'</p>'; 
+									            tmpl+='<div class="glc-zdt">'; 									
+									                tmpl+='<div class="goods_coupon"><span class="c_l clb"></span><span class="c_r clb"></span><span>券 ￥</span><span class="qunjine">'+item.couponmoney+'</span></div>'; 
+									                  tmpl+='<span class="zsz">折上折</span>'; 
+									                  tmpl+='<p class="hasq">已抢<span>'+item.itemsale+'</span>件</p>'; 
+									            tmpl+='</div>'; 
+									            tmpl+='<div class="cf gl-bot">'; 
+									                tmpl+='<p class="glc-price">￥ <span class="priceNum">'+item.itemendprice+'</span> <span> 券后</span></p>'; 
+									                if(kj==1){
+									                	tmpl+='<div class="glc-btn">马上抢</div>';
+									                }else{
+									                	tmpl+='<div class="glc-link glc-btn" style="background-color: rgb(207, 187, 235);">即将开始</div>';
+									                }
+									                
+									           tmpl+=' </div>'; 
+									       tmpl+=' </div>'; 
+									   tmpl+=' </a>'; 
+		                        });
+                                 $("#list").append(tmpl);
+
+                                console.log(res.pages);
+		                        next(lis.join(''), page < res.pages);
+		                    });
+		                }
+		            });
+		        });
+		    }();
+		</script>
+
+        <div class="toTop"></div>
+        <script src="./js/cms_common.js"></script>
+        <div style="display: none;"></div>
+    
+</body></html>

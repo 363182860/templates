@@ -1,0 +1,148 @@
+31b
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>全部订单</title>
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/swiper.css" rel="stylesheet" />
+    <link href="../css/preload.css" rel="stylesheet" />
+    <link href="../css/loading.css" rel="stylesheet" />
+    
+ 
+12be
+   <script>
+        var deviceWidth = document.documentElement.clientWidth;
+        if (deviceWidth > 750) deviceWidth = 750;
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + "px";
+        document.documentElement.style.width = "100%";
+    </script>
+</head>
+<body>
+    <div id="containter" class="container">
+        
+<div class="ordernav">
+        <a href="./index.php?i=3&c=entry&op=add&do=addorder&m=tiger_newhu"><span>添加订单</span></a>
+        <a href="./index.php?i=3&c=entry&op=qb&do=orderlist&m=tiger_newhu"  class="cur"><span>全部订单</span></a>
+        <a href="./index.php?i=3&c=entry&op=df&do=orderlist&m=tiger_newhu" ><span>待返</span></a>
+        <a href="./index.php?i=3&c=entry&op=yf&do=orderlist&m=tiger_newhu" ><span>已返</span></a>
+</div>
+
+
+<style>
+.usertx {
+        width: 7.5rem;
+        display: -webkit-box;
+        height: 45px;
+        line-height: 45px;
+        -webkit-box-align: center;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0 0.2rem;
+        border-bottom: 1px solid #f0f0f0;
+        font-size: 14px;
+        position: relative;
+        width:100%;
+        
+
+    }
+    .usertx span {
+        display: block;
+        color: #888;
+    }
+    .usertx .userpointer {
+        position: absolute;
+        color: #444;
+        font-size: 16px;
+        left:15px;
+    }
+     .usergotx {
+        position: absolute;
+        right:20px;
+    }
+    .olist{
+     width:100%;    border-bottom: 1px solid #f0f0f0;padding: 0 0.2rem;
+     height:60px;padding-top:5px;padding-bottom:5px;
+
+    }
+    .oleft{display:inline-block;width:70%;padding-left:5px;line-height:20px;}
+    .oright{    display: inline-block;
+    width: 21%;
+    text-align: center;
+    padding-right: 8px;
+    line-height: 60px;
+    height: 50px;
+    float: right;
+}}
+
+</style>
+<div class="allorder">
+	<!--没有订单-->
+    <ul id="lists">
+        <div class="nocoll">
+          <p>这里还没有订单呢~</p>
+        </div>
+    </ul>
+
+    <!--已审核-->    
+    <ul id="lists">
+        <div class="olist">
+            <span class="oleft">
+            	我的自购<br>订单号:105871156309387163<br>
+                    奖励：1.24金币                                        
+            </span>
+            <span class="oright" style="color:#C06800">已审核</span>
+        </div>         
+    </ul>
+
+    
+</div>
+
+</div>
+<!--底部菜单开始-->
+<link href="http://www.auiju.cn/addons/tiger_newhu/template/mobile/tbgoods/style9/css/style.css" rel="stylesheet" />
+    <div id="menu">
+        <ul>
+                    <li class="relative ">
+                <a href="http://www.auiju.cn/app/index.php?i=3&c=entry&do=index&m=tiger_newhu&dluid=" class="link-hover"></a>
+                <div class="menu-inside">
+                <span class="icon_n1" style="background: url(../images/AJEkOsl3f5k84dEl32dfLjYJhJMlYT.png)no-repeat;border-radius:50%"></span>
+                <font>首页</font>
+                </div>
+            </li>
+                     <li class="relative ">
+                <a href="http://www.auiju.cn/app/index.php?i=3&c=entry&do=lmsearch&m=tiger_newhu&dluid=" class="link-hover"></a>
+                <div class="menu-inside">
+                <span class="icon_n1" style="background: url(../images/Fsbv99T8N4tJt5V8369UtN5sS48xHZ.png) no-repeat;border-radius:50%"></span>
+                <font>超级搜索</font>
+                </div>
+            </li>
+                     <li class="relative ">
+                <a href="http://www.auiju.cn/app/index.php?i=3&c=entry&hd=5&do=newcat&m=tiger_newhu&dluid=" class="link-hover"></a>
+                <div class="menu-inside">
+                <span class="icon_n1" style="background: url(../images/xk1zp81NQ16Y01014k4etWQWkKn4m8.png) no-repeat;border-radius:50%"></span>
+                <font>视频直播</font>
+                </div>
+            </li>
+                     <li class="relative ">
+                <a href="http://www.auiju.cn/app/index.php?i=3&c=entry&do=member&m=tiger_newhu&dluid=" class="link-hover"></a>
+                <div class="menu-inside">
+                <span class="icon_n1" style="background: url(../images/Jw795a45wiL02i8Lp2Wm0lipML45PI.png) no-repeat;border-radius:50%"></span>
+                <font>会员中心</font>
+                </div>
+            </li>
+                     <li class="relative ">
+                <a href="http://www.auiju.cn/app/index.php?i=3&c=entry&do=ddq&m=tiger_newhu&dluid=" class="link-hover"></a>
+                <div class="menu-inside">
+                <span class="icon_n1" style="background: url(../images/tQk9nc83KOzqqZc67P8tK9on3Qqn87.png) no-repeat;border-radius:50%"></span>
+                <font>叮咚抢</font>
+                </div>
+            </li>
+                 </ul>
+    </div>
+ <!--底部菜单结束-->
+</html>

@@ -1,0 +1,362 @@
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="target-densitydpi=286, width=640, user-scalable=no">
+<title>超级搜索</title>
+<link href="./css/css1.css" rel="stylesheet">
+<link href="./css/swiper.css" rel="stylesheet">
+<script src="./js/jquery.min.js"></script>
+<script src="./js/swiper.jquery.js"></script>
+</head>
+
+<body style="background:#f5f5f5" data-ext-version="1.4.2">
+<!--<div class="topt mgz"></div>-->
+<!--<div class="top top2 mgz xi30 cen bai">
+    超级搜索
+    <a href="#"><div class="topl"><img src="./images/left.png" align='absmiddle' style='margin-top:-4px;'></div></a>
+</div>-->
+<div class="con9 mgz">
+	<form action="./index.php?i=3&amp;c=entry&amp;do=cqlist&amp;m=tiger_newhu" method="get" id="J_Form" onsubmit="return checkForm(this);">
+    <div class="con9z ov">
+        <div class="con9l f"><input type="text" name="key" id="key" value="" style="height: 60px;" placeholder="宝贝标题/关键词 （如：女装/男装）"></div>
+         <input type="hidden" name="i" value="3">
+        <input type="hidden" name="c" value="entry">
+        <input type="hidden" name="m" value="tiger_newhu">
+        <input type="hidden" name="do" value="cqlist">
+        <input type="hidden" name="dluid" value="">
+        <input type="hidden" name="pid" value="mm_13157221_17524774_63558203">
+        <!--<a href="#"><div class="con9r r xi28 cen bai">搜索</div></a>-->
+        <button type="submit" class="con9r r xi28 cen bai" id="J_FormBtn" style="border: 0;height: 70px;">搜索</button>        
+    </div>       
+    </form>
+</div>
+<div style="margin-left: auto;margin-right: auto;width: 640px;">
+	<div class="moregd" id="moregd">
+			<ul id="keylist"></ul>
+    </div>
+</div>
+ 		
+		<style>
+			.moregd{
+				border: 1px #f4f4f4 solid;
+			    position: absolute;
+			    z-index: 10000;
+			    width: 462px;
+   				left: 50%;
+   				margin-left: -296px;
+   				top:258px;
+			    background: #ffffff;
+			    display: none;
+			}
+			.moregd li{padding-left: 10px;font-size: 18px;height:45px;line-height:45px;}
+			.moregd li a{color: #545454;}
+		</style>
+				<script>
+					$('#key').bind('input propertychange',function(){
+		            	var gdkey=$(this).val();
+		            	if(gdkey){
+		            		$("#moregd").show();  
+		            		$.ajax({
+					            url: "https://suggest.taobao.com/sug?code=utf-8&q="+gdkey+"&callback=jsonp",
+					            dataType: 'jsonp',
+					            jsonp: 'callback',
+					            success: function (result) {
+					            	console.log(result);
+					            	if(result.result){
+					            		var len = result.result.length;
+					            		var gdkey = '';
+					            		if(len){
+					            			for (var i = 0; i < len; i++) {
+						                        gdkey+= '<li id="liskeyname">'+result.result[i][0]+'</li>';
+						                        //console.log(result.result[i][0]);
+						                    }
+						            		$("#keylist").html(gdkey);
+						            		$('#moregd li').click(function(){
+						            			$("#key").val($(this).text());
+												$("#moregd").hide();
+												$tzzulr="./index.php?i=3&c=entry&dluid=&pid=mm_13157221_17524774_63558203&do=cqlist&m=tiger_newhu&key="+$(this).text();
+												window.location.href=$tzzulr;
+											})
+					            		}else{
+					            			$("#moregd").hide();
+					            		}					            		
+					            	}
+					            }
+					        });		                    
+		               }else{
+		                	$("#moregd").hide();  
+		               }
+					});	
+					
+					
+					</script>
+<div class="con10 mgz bgbai">
+    <div class="con10t ov xi18">
+        <div class="con10tl f">热门搜索</div>
+        <!--<a href="#"><div class="con10tr r hong">清空历史记录</div></a>-->
+    </div>
+    <div class="con10f ov">
+        <ul>
+        	            <a href="./index.php?i=3&amp;c=entry&amp;key=%E9%95%BF%E8%A2%96%E8%A1%AC%E8%A1%AB&amp;dluid=&amp;pid=mm_13157221_17524774_63558203&amp;do=cqlist&amp;m=tiger_newhu"><li>长袖衬衫</li></a>
+                        <a href="./index.php?i=3&amp;c=entry&amp;key=%E8%BF%9E%E8%A1%A3%E8%A3%99&amp;dluid=&amp;pid=mm_13157221_17524774_63558203&amp;do=cqlist&amp;m=tiger_newhu"><li>连衣裙</li></a>
+                        <a href="./index.php?i=3&amp;c=entry&amp;key=%E5%86%85%E8%A1%A3&amp;dluid=&amp;pid=mm_13157221_17524774_63558203&amp;do=cqlist&amp;m=tiger_newhu"><li>内衣</li></a>
+                        <a href="./index.php?i=3&amp;c=entry&amp;key=%E6%AF%9B%E7%BB%92%E8%A1%AC%E8%A1%AB&amp;dluid=&amp;pid=mm_13157221_17524774_63558203&amp;do=cqlist&amp;m=tiger_newhu"><li>毛绒衬衫</li></a>
+                    </ul>
+    </div>
+</div>
+<div class="con11 mgz bgbai">
+    <ul>
+    	        <li>
+        	<a href="./index.php?i=3&amp;c=entry&amp;type=1&amp;px=&amp;pid=mm_13157221_17524774_63558203&amp;dluid=&amp;do=Newcat&amp;m=tiger_newhu">
+            <div class="con11t cen"><img src="http://tigertaoke.com/static/fl/skirt_icon.png" style="width: 60px;" align="absmiddle"></div>
+            女装        </a>
+                </li><li>
+        	<a href="./index.php?i=3&amp;c=entry&amp;type=2&amp;px=&amp;pid=mm_13157221_17524774_63558203&amp;dluid=&amp;do=Newcat&amp;m=tiger_newhu">
+            <div class="con11t cen"><img src="http://tigertaoke.com/static/fl/man_icon.png" style="width: 60px;" align="absmiddle"></div>
+            男装        </a>
+                </li><li>
+        	<a href="./index.php?i=3&amp;c=entry&amp;type=3&amp;px=&amp;pid=mm_13157221_17524774_63558203&amp;dluid=&amp;do=Newcat&amp;m=tiger_newhu">
+            <div class="con11t cen"><img src="http://tigertaoke.com/static/fl/underwear_icon.png" style="width: 60px;" align="absmiddle"></div>
+            内衣        </a>
+                </li><li>
+        	<a href="./index.php?i=3&amp;c=entry&amp;type=4&amp;px=&amp;pid=mm_13157221_17524774_63558203&amp;dluid=&amp;do=Newcat&amp;m=tiger_newhu">
+            <div class="con11t cen"><img src="http://tigertaoke.com/static/fl/makeup_icon.png" style="width: 60px;" align="absmiddle"></div>
+            美妆        </a>
+                </li><li>
+        	<a href="./index.php?i=3&amp;c=entry&amp;type=5&amp;px=&amp;pid=mm_13157221_17524774_63558203&amp;dluid=&amp;do=Newcat&amp;m=tiger_newhu">
+            <div class="con11t cen"><img src="http://tigertaoke.com/static/fl/hat_icon.png" style="width: 60px;" align="absmiddle"></div>
+            配饰        </a>
+                </li><li>
+        	<a href="./index.php?i=3&amp;c=entry&amp;type=6&amp;px=&amp;pid=mm_13157221_17524774_63558203&amp;dluid=&amp;do=Newcat&amp;m=tiger_newhu">
+            <div class="con11t cen"><img src="http://tigertaoke.com/static/fl/shoes_icon.png" style="width: 60px;" align="absmiddle"></div>
+            鞋品        </a>
+                </li><li>
+        	<a href="./index.php?i=3&amp;c=entry&amp;type=7&amp;px=&amp;pid=mm_13157221_17524774_63558203&amp;dluid=&amp;do=Newcat&amp;m=tiger_newhu">
+            <div class="con11t cen"><img src="http://tigertaoke.com/static/fl/package_icon.png" style="width: 60px;" align="absmiddle"></div>
+            箱包        </a>
+                </li><li>
+        	<a href="./index.php?i=3&amp;c=entry&amp;type=9&amp;px=&amp;pid=mm_13157221_17524774_63558203&amp;dluid=&amp;do=Newcat&amp;m=tiger_newhu">
+            <div class="con11t cen"><img src="http://tigertaoke.com/static/fl/child1_icon.png" style="width: 60px;" align="absmiddle"></div>
+            母婴        </a>
+                </li><li>
+        	<a href="./index.php?i=3&amp;c=entry&amp;type=10&amp;px=&amp;pid=mm_13157221_17524774_63558203&amp;dluid=&amp;do=Newcat&amp;m=tiger_newhu">
+            <div class="con11t cen"><img src="http://tigertaoke.com/static/fl/home_icon.png" style="width: 60px;" align="absmiddle"></div>
+            居家        </a>
+                </li><li>
+        	<a href="./index.php?i=3&amp;c=entry&amp;type=11&amp;px=&amp;pid=mm_13157221_17524774_63558203&amp;dluid=&amp;do=Newcat&amp;m=tiger_newhu">
+            <div class="con11t cen"><img src="http://tigertaoke.com/static/fl/food_icon.png" style="width: 60px;" align="absmiddle"></div>
+            美食        </a>
+                </li>
+
+    </ul>
+</div>
+<div style="text-align: center;">
+	<a href="http://www.auiju.cn/app/index.php?i=3&amp;c=entry&amp;do=c1111&amp;m=tiger_newhu" title=""><img src="http://www.auiju.cn/attachment/images/3/2017/12/Ls7d5T7dr99lIP72Ljh3Ns2zdN77Ir.jpg" alt="" width="640"></a>
+</div>
+<div class="con8 mgz xi18 cen bgbai">-猜你喜欢-</div>
+<div class="con7 mgz">
+    <ul>
+    	        <li><a href="./index.php?i=3&amp;c=entry&amp;itemid=531580433126&amp;lm=2&amp;pid=mm_13157221_17524774_63558203&amp;do=view&amp;m=tiger_newhu">
+            <div class="con7t cen"><img src="https://img.alicdn.com/imgextra/i1/82219812/TB26D1EaQfb_uJkHFqDXXXVIVXa_!!82219812.jpg_300x300q60.jpg" align="absmiddle"></div>
+            <div class="con7m xi20 hui" style="height: 37px;overflow: hidden;">欧丽丝勇者男士古龙香水50ml 清新持久淡香喷雾 买2送1瓶女士香水</div>
+            <div class="con7f ov">
+                <div class="con7fl f xi18">原价￥<span class="xi22">9.90</span></div>
+                <div class="con7fr r xi18 hong">券后价￥<span class="xi20">6.90</span></div>
+            </div>
+            <div class="con7x2 ov">
+                <div class="con7x2l f">
+                    <div class="con7x2ll f xi18 bai">领券</div>
+                    <div class="con7x2lr f xi18">减3</div>
+                </div>
+                <div class="con7xr r xi18 hui">销量7145</div>
+            </div></a>
+        </li>
+                 <li><a href="./index.php?i=3&amp;c=entry&amp;itemid=544200555179&amp;lm=2&amp;pid=mm_13157221_17524774_63558203&amp;do=view&amp;m=tiger_newhu">
+            <div class="con7t cen"><img src="https://img.alicdn.com/bao/uploaded/i2/TB1gZFBPFXXXXbNaXXXXXXXXXXX_!!0-item_pic.jpg_300x300q60.jpg" align="absmiddle"></div>
+            <div class="con7m xi20 hui" style="height: 37px;overflow: hidden;">2017秋冬女装修身百搭套头针织衫韩版秋装紧身内搭毛衣打底衫线衣</div>
+            <div class="con7f ov">
+                <div class="con7fl f xi18">原价￥<span class="xi22">48.90</span></div>
+                <div class="con7fr r xi18 hong">券后价￥<span class="xi20">43.90</span></div>
+            </div>
+            <div class="con7x2 ov">
+                <div class="con7x2l f">
+                    <div class="con7x2ll f xi18 bai">领券</div>
+                    <div class="con7x2lr f xi18">减5</div>
+                </div>
+                <div class="con7xr r xi18 hui">销量132</div>
+            </div></a>
+        </li>
+                 <li><a href="./index.php?i=3&amp;c=entry&amp;itemid=538031012012&amp;lm=2&amp;pid=mm_13157221_17524774_63558203&amp;do=view&amp;m=tiger_newhu">
+            <div class="con7t cen"><img src="https://img.alicdn.com/imgextra/i2/1597684399/TB2F7N1fS_I8KJjy0FoXXaFnVXa_!!1597684399.jpg_300x300q60.jpg" align="absmiddle"></div>
+            <div class="con7m xi20 hui" style="height: 37px;overflow: hidden;">2017秋茶新茶安溪铁观音清香型礼盒装袋装乌龙茶叶兰花香250g包邮</div>
+            <div class="con7f ov">
+                <div class="con7fl f xi18">原价￥<span class="xi22">29.90</span></div>
+                <div class="con7fr r xi18 hong">券后价￥<span class="xi20">14.90</span></div>
+            </div>
+            <div class="con7x2 ov">
+                <div class="con7x2l f">
+                    <div class="con7x2ll f xi18 bai">领券</div>
+                    <div class="con7x2lr f xi18">减15</div>
+                </div>
+                <div class="con7xr r xi18 hui">销量379</div>
+            </div></a>
+        </li>
+                 <li><a href="./index.php?i=3&amp;c=entry&amp;itemid=559433591478&amp;lm=2&amp;pid=mm_13157221_17524774_63558203&amp;do=view&amp;m=tiger_newhu">
+            <div class="con7t cen"><img src="https://img.alicdn.com/imgextra/i3/3430957299/TB2npa0XtPJ3eJjSZFLXXab3FXa_!!3430957299.jpg_300x300q60.jpg" align="absmiddle"></div>
+            <div class="con7m xi20 hui" style="height: 37px;overflow: hidden;">雪地靴女皮毛一体短筒韩版厚底保暖加绒百搭学生马丁靴女短靴棉鞋</div>
+            <div class="con7f ov">
+                <div class="con7fl f xi18">原价￥<span class="xi22">29.90</span></div>
+                <div class="con7fr r xi18 hong">券后价￥<span class="xi20">19.90</span></div>
+            </div>
+            <div class="con7x2 ov">
+                <div class="con7x2l f">
+                    <div class="con7x2ll f xi18 bai">领券</div>
+                    <div class="con7x2lr f xi18">减10</div>
+                </div>
+                <div class="con7xr r xi18 hui">销量692</div>
+            </div></a>
+        </li>
+                 <li><a href="./index.php?i=3&amp;c=entry&amp;itemid=523256223504&amp;lm=2&amp;pid=mm_13157221_17524774_63558203&amp;do=view&amp;m=tiger_newhu">
+            <div class="con7t cen"><img src="https://img.alicdn.com/bao/uploaded/i4/2114610547/TB1kceAgfBNTKJjSszeXXcu2VXa_!!0-item_pic.jpg_300x300q60.jpg" align="absmiddle"></div>
+            <div class="con7m xi20 hui" style="height: 37px;overflow: hidden;">红石榴睡眠面膜泥收缩毛孔免洗补水保湿深层清洁滋润</div>
+            <div class="con7f ov">
+                <div class="con7fl f xi18">原价￥<span class="xi22">21.90</span></div>
+                <div class="con7fr r xi18 hong">券后价￥<span class="xi20">6.90</span></div>
+            </div>
+            <div class="con7x2 ov">
+                <div class="con7x2l f">
+                    <div class="con7x2ll f xi18 bai">领券</div>
+                    <div class="con7x2lr f xi18">减15</div>
+                </div>
+                <div class="con7xr r xi18 hui">销量15495</div>
+            </div></a>
+        </li>
+                 <li><a href="./index.php?i=3&amp;c=entry&amp;itemid=556491205905&amp;lm=2&amp;pid=mm_13157221_17524774_63558203&amp;do=view&amp;m=tiger_newhu">
+            <div class="con7t cen"><img src="http://img.alicdn.com/imgextra/i2/2026815587/TB26VRLqwMPMeJjy1XcXXXpppXa_!!2026815587.jpg_300x300q60.jpg" align="absmiddle"></div>
+            <div class="con7m xi20 hui" style="height: 37px;overflow: hidden;">2017春夏季新款女士懒人小白鞋学生院时尚运动系带透气防滑休闲鞋</div>
+            <div class="con7f ov">
+                <div class="con7fl f xi18">原价￥<span class="xi22">33.90</span></div>
+                <div class="con7fr r xi18 hong">券后价￥<span class="xi20">18.90</span></div>
+            </div>
+            <div class="con7x2 ov">
+                <div class="con7x2l f">
+                    <div class="con7x2ll f xi18 bai">领券</div>
+                    <div class="con7x2lr f xi18">减15</div>
+                </div>
+                <div class="con7xr r xi18 hui">销量1293</div>
+            </div></a>
+        </li>
+                 <li><a href="./index.php?i=3&amp;c=entry&amp;itemid=549082477217&amp;lm=2&amp;pid=mm_13157221_17524774_63558203&amp;do=view&amp;m=tiger_newhu">
+            <div class="con7t cen"><img src="https://img.alicdn.com/imgextra/i2/1133391953/TB2LB2JhsnI8KJjSsziXXb8QpXa_!!1133391953.jpg_300x300q60.jpg" align="absmiddle"></div>
+            <div class="con7m xi20 hui" style="height: 37px;overflow: hidden;">元旦圣诞节活动装饰铝膜气球立柱卡通生日婚庆结婚路引布置道具</div>
+            <div class="con7f ov">
+                <div class="con7fl f xi18">原价￥<span class="xi22">26.80</span></div>
+                <div class="con7fr r xi18 hong">券后价￥<span class="xi20">16.80</span></div>
+            </div>
+            <div class="con7x2 ov">
+                <div class="con7x2l f">
+                    <div class="con7x2ll f xi18 bai">领券</div>
+                    <div class="con7x2lr f xi18">减10</div>
+                </div>
+                <div class="con7xr r xi18 hui">销量1494</div>
+            </div></a>
+        </li>
+                 <li><a href="./index.php?i=3&amp;c=entry&amp;itemid=559445390840&amp;lm=2&amp;pid=mm_13157221_17524774_63558203&amp;do=view&amp;m=tiger_newhu">
+            <div class="con7t cen"><img src="https://img.alicdn.com/imgextra/i4/3012913363/TB28NP_hvDH8KJjy1XcXXcpdXXa_!!3012913363.jpg_300x300q60.jpg" align="absmiddle"></div>
+            <div class="con7m xi20 hui" style="height: 37px;overflow: hidden;">正品老北京足贴艾草足贴帮助排毒通络祛湿睡眠驱寒去湿气养生脚贴</div>
+            <div class="con7f ov">
+                <div class="con7fl f xi18">原价￥<span class="xi22">34.80</span></div>
+                <div class="con7fr r xi18 hong">券后价￥<span class="xi20">19.80</span></div>
+            </div>
+            <div class="con7x2 ov">
+                <div class="con7x2l f">
+                    <div class="con7x2ll f xi18 bai">领券</div>
+                    <div class="con7x2lr f xi18">减15</div>
+                </div>
+                <div class="con7xr r xi18 hui">销量7771</div>
+            </div></a>
+        </li>
+                 <li><a href="./index.php?i=3&amp;c=entry&amp;itemid=556559603566&amp;lm=2&amp;pid=mm_13157221_17524774_63558203&amp;do=view&amp;m=tiger_newhu">
+            <div class="con7t cen"><img src="https://img.alicdn.com/imgextra/i1/3364816126/TB2WprrcxHI8KJjy1zbXXaxdpXa_!!3364816126.jpg_300x300q60.jpg" align="absmiddle"></div>
+            <div class="con7m xi20 hui" style="height: 37px;overflow: hidden;">欧诗漫百花萃少女护肤品套装18岁女生的化妆品学生水乳液补水保湿</div>
+            <div class="con7f ov">
+                <div class="con7fl f xi18">原价￥<span class="xi22">99.90</span></div>
+                <div class="con7fr r xi18 hong">券后价￥<span class="xi20">49.90</span></div>
+            </div>
+            <div class="con7x2 ov">
+                <div class="con7x2l f">
+                    <div class="con7x2ll f xi18 bai">领券</div>
+                    <div class="con7x2lr f xi18">减50</div>
+                </div>
+                <div class="con7xr r xi18 hui">销量2840</div>
+            </div></a>
+        </li>
+                 <li><a href="./index.php?i=3&amp;c=entry&amp;itemid=556902567227&amp;lm=2&amp;pid=mm_13157221_17524774_63558203&amp;do=view&amp;m=tiger_newhu">
+            <div class="con7t cen"><img src="https://img.alicdn.com/imgextra/i3/2676586451/TB2mPzYgf2H8KJjy1zkXXXr7pXa_!!2676586451.jpg_300x300q60.jpg" align="absmiddle"></div>
+            <div class="con7m xi20 hui" style="height: 37px;overflow: hidden;">玉沙纯棉儿童成人洗脸毛巾情侣款吸汗加厚全棉面巾格子毛巾</div>
+            <div class="con7f ov">
+                <div class="con7fl f xi18">原价￥<span class="xi22">10.00</span></div>
+                <div class="con7fr r xi18 hong">券后价￥<span class="xi20">5.00</span></div>
+            </div>
+            <div class="con7x2 ov">
+                <div class="con7x2l f">
+                    <div class="con7x2ll f xi18 bai">领券</div>
+                    <div class="con7x2lr f xi18">减5</div>
+                </div>
+                <div class="con7xr r xi18 hui">销量1913</div>
+            </div></a>
+        </li>
+                 <li><a href="./index.php?i=3&amp;c=entry&amp;itemid=560075049719&amp;lm=2&amp;pid=mm_13157221_17524774_63558203&amp;do=view&amp;m=tiger_newhu">
+            <div class="con7t cen"><img src="https://img.alicdn.com/imgextra/i2/3012913363/TB29.gDbgjN8KJjSZFgXXbjbVXa_!!3012913363.jpg_300x300q60.jpg" align="absmiddle"></div>
+            <div class="con7m xi20 hui" style="height: 37px;overflow: hidden;">顺庭保温碟恒温加热器暖杯垫暖奶器办公室茶座保温底座</div>
+            <div class="con7f ov">
+                <div class="con7fl f xi18">原价￥<span class="xi22">29.90</span></div>
+                <div class="con7fr r xi18 hong">券后价￥<span class="xi20">19.90</span></div>
+            </div>
+            <div class="con7x2 ov">
+                <div class="con7x2l f">
+                    <div class="con7x2ll f xi18 bai">领券</div>
+                    <div class="con7x2lr f xi18">减10</div>
+                </div>
+                <div class="con7xr r xi18 hui">销量10965</div>
+            </div></a>
+        </li>
+                 <li><a href="./index.php?i=3&amp;c=entry&amp;itemid=548229553493&amp;lm=2&amp;pid=mm_13157221_17524774_63558203&amp;do=view&amp;m=tiger_newhu">
+            <div class="con7t cen"><img src="https://img.alicdn.com/imgextra/i2/3012913363/TB2OoFOdTnI8KJjy0FfXXcdoVXa_!!3012913363.jpg_300x300q60.jpg" align="absmiddle"></div>
+            <div class="con7m xi20 hui" style="height: 37px;overflow: hidden;">原装进口千佰果水果香皂3个味道5块随机 洗澡沐浴保湿留香去泥</div>
+            <div class="con7f ov">
+                <div class="con7fl f xi18">原价￥<span class="xi22">29.90</span></div>
+                <div class="con7fr r xi18 hong">券后价￥<span class="xi20">14.90</span></div>
+            </div>
+            <div class="con7x2 ov">
+                <div class="con7x2l f">
+                    <div class="con7x2ll f xi18 bai">领券</div>
+                    <div class="con7x2lr f xi18">减15</div>
+                </div>
+                <div class="con7xr r xi18 hui">销量6416</div>
+            </div></a>
+        </li>
+         
+    </ul>
+</div>
+<div class="footer mgz">
+    <ul>
+         
+        <a href="http://www.auiju.cn/app/index.php?i=3&amp;c=entry&amp;do=index&amp;m=tiger_newhu&amp;pid=mm_13157221_17524774_63558203&amp;dluid=&amp;pid=mm_13157221_17524774_63558203"><li class="li2s" style="background: url(http://www.auiju.cn/attachment/images/3/2017/11/AJEkOsl3f5k84dEl32dfLjYJhJMlYT.png) center 14px no-repeat;background-size:35px;font-size: 16px;">首页</li></a>
+
+        
+        <a href="http://www.auiju.cn/app/index.php?i=3&amp;c=entry&amp;do=lmsearch&amp;m=tiger_newhu&amp;pid=mm_13157221_17524774_63558203&amp;dluid=&amp;pid=mm_13157221_17524774_63558203"><li class="li2s" style="background: url(http://www.auiju.cn/attachment/images/3/2017/11/Fsbv99T8N4tJt5V8369UtN5sS48xHZ.png) center 14px no-repeat;background-size:35px;font-size: 16px;">超级搜索</li></a>
+
+        
+        <a href="http://www.auiju.cn/app/index.php?i=3&amp;c=entry&amp;hd=5&amp;do=newcat&amp;m=tiger_newhu&amp;pid=mm_13157221_17524774_63558203&amp;dluid=&amp;pid=mm_13157221_17524774_63558203"><li class="li2s" style="background: url(http://www.auiju.cn/attachment/images/3/2017/11/xk1zp81NQ16Y01014k4etWQWkKn4m8.png) center 14px no-repeat;background-size:35px;font-size: 16px;">视频直播</li></a>
+
+        
+        <a href="http://www.auiju.cn/app/index.php?i=3&amp;c=entry&amp;do=member&amp;m=tiger_newhu&amp;pid=mm_13157221_17524774_63558203&amp;dluid=&amp;pid=mm_13157221_17524774_63558203"><li class="li2s" style="background: url(http://www.auiju.cn/attachment/images/3/2017/11/Jw795a45wiL02i8Lp2Wm0lipML45PI.png) center 14px no-repeat;background-size:35px;font-size: 16px;">会员中心</li></a>
+
+        
+        <a href="http://www.auiju.cn/app/index.php?i=3&amp;c=entry&amp;do=ddq&amp;m=tiger_newhu&amp;pid=mm_13157221_17524774_63558203&amp;dluid=&amp;pid=mm_13157221_17524774_63558203"><li class="li2s" style="background: url(http://www.auiju.cn/attachment/images/3/2017/11/tQk9nc83KOzqqZc67P8tK9on3Qqn87.png) center 14px no-repeat;background-size:35px;font-size: 16px;">叮咚抢</li></a>
+
+            </ul>
+</div>
+
+
+</body></html>

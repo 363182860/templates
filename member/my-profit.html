@@ -1,0 +1,555 @@
+<!doctype html>
+<html class="no-js">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+<title>小奇妙 - 合伙人系统</title>
+
+<link rel="stylesheet" type="text/css" href="https://lib.baomitu.com/amazeui/2.7.2/css/amazeui.min.css"/>
+<link rel="stylesheet" type="text/css" href="../addons/css/style.css" />
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+ <!--[if (gte IE 9)|!(IE)]><!-->
+<script type="text/javascript" src="https://lib.baomitu.com/amazeui/2.7.2/js/amazeui.min.js"></script>
+
+<!--<![endif]-->
+</head>
+
+<body style="width:100%;max-width:640px;margin:0px auto;">
+
+<div class="am-modal am-modal-alert" tabindex="-1" id="fq_alert">
+  <div class="am-modal-dialog">
+    <div class="am-modal-hd" id="fq_alert_title"></div>
+    <div class="am-modal-bd" id="fq_alert_info">
+    </div>
+    <div class="am-modal-footer">
+      <span class="am-modal-btn">确定</span>
+    </div>
+  </div>
+</div>
+
+<div class="am-modal am-modal-confirm" tabindex="-1" id="fq_confirm">
+  <div class="am-modal-dialog">
+    <div class="am-modal-hd" id="fq_confirm_title"></div>
+    <div class="am-modal-bd" id="fq_confirm_info"></div>
+    <div class="am-modal-footer">
+      <span class="am-modal-btn" data-am-modal-confirm>确定</span>
+    </div>
+  </div>
+</div>
+<link rel="stylesheet" href="../addons/css/order_system.css?t=1" />
+
+<!--
+<link rel="stylesheet" href="../addons/bsht_tbk/res/daili/css/font.css">
+<link rel="stylesheet" href="../addons/bsht_tbk/res/daili/css/font2.css">
+<link rel="stylesheet" href="../addons/bsht_tbk/res/daili/css/font3.css">-->
+<link rel="stylesheet" href="../addons/css/uc.css">
+<script type="text/javascript" src="../addons/js/scrolltext.js"></script>
+<style>
+    #notice_content img{max-width: 100%;}
+</style>
+<script>
+   function check(){  
+            var nameValue=document.getElementById("orderid").value;  
+            if (nameValue.match(/^\d{16,}/)==null) // 或者是!nameValue  
+            {  
+                $('#fq_alert_info').text('订单号为16位以上的数字');
+                $('#fq_alert').modal();
+                return false; 
+            }  
+        } 
+</script>
+
+<header class="fq-background-white" style="position:relative;z-index:999;">
+        <a href="javascript:void(0);" onclick="back();" style="position:absolute;top:2px;color:#fff;width:45px;height:100%;padding-left:10px;font-size:25px;" class="am-inline-block am-text-middle am-icon-angle-left"></a>
+<a href="./index.php?i=109&c=entry&shopid=5460&openid=&do=uc_shop_yq&m=bsht_tbkdl" style="position:absolute;right:8px;top:2px;color:#fff;width:25px;height:100%;font-size:25px;"><img src="../addons/imgs/yaoqing.png" style="height:23px;width:23px"></a>
+</header>
+
+
+    <div class="fq-order-inquiry" style="background: linear-gradient(to top,#FF3F79,#FF9C62);">
+        <div class="fq-inquiry-head am-padding-sm am-text-center">
+            <div class="fq-inquiry-title fq-text-white am-text-sm" >小奇妙</div>
+            			<a href="javascript:" style="margin-right:0px;font-size:12px;color:#eee">店长级别：钻石店长 | SPID：5460</a>
+												<div class="fq-inquiry-name am-margin-top am-margin-bottom-sm am-text-xs ">
+                <img class="am-round" src="http://wx.qlogo.cn/mmopen/rNDibx9lEwj6cknn2ybHYfEOlaEXqbuzvoT4M5daHicibdfPWyRPpmibUOSvGCc6G1pXXFmvB0th1oKlg3D4BLZ4vudKqza6FicSz/132" />
+                <span>你好，<span>虞泽荣DonFisher</span></span>
+
+            </div>
+            <div class="am-margin-bottom-sm">
+               			   			   <a class="fq-inquiry-mall am-text-xs am-padding-horizontal-sm am-padding-vertical-xs am-round am-margin-right-xs" href="./index.php?i=109&c=entry&shopid=5460&openid=&do=uc_ph_shop_td_lv2&m=bsht_tbkdl">
+               <i class="iconfont icon-dailishangguanli"></i> 我的团队
+               </a>
+			                   
+                				<a class="fq-inquiry-mall am-text-xs am-padding-horizontal-sm am-padding-vertical-xs am-round am-margin-right-xs" href="http://www.ayatt.cn/app/index.php?i=109&c=entry&do=index&m=bsht_tbk&shopid=5460">
+                <i class="iconfont icon-shangcheng5"></i> 我的分店
+                </a>
+								
+                				<a class="fq-inquiry-mall am-text-xs am-padding-horizontal-sm am-padding-vertical-xs am-round am-margin-right-xs" href="http://www.ayatt.cn/app/index.php?i=109&c=entry&do=uc_shop_diy&m=bsht_tbkdl&shopid=5460&openid=">
+                <i class="iconfont icon-business_line"></i> 店铺装修
+                </a>
+								            </div>
+            			<form action="./index.php"  onSubmit="return check();">
+                <input type="hidden" name="c" value="entry" />
+			    <input type="hidden" name="i" value="109" />
+        	    <input type="hidden" name="m" value="bsht_tbkdl" />
+        	    <input type="hidden" name="do" value="uc_shop" />
+			    <input type="hidden" name="shopid" value="5460" />
+				<input type="hidden" name="openid" value="" />
+				<input class="fq-inquiry-search am-text-center am-padding-xs am-text-sm" value="" type="text" placeholder="请输入要查询的订单号" id="orderid"  name="orderid" style="background:#FF9C62"/>
+                <i class="iconfont icon-fangdajing fq-text-white am-fr am-margin-right-sm" onclick="search();"></i>
+            </form>
+			                    </div>
+    </div>
+    
+
+
+	<div class=" am-modal am-modal-no-btn" tabindex="-1" id="notice_detail">
+        <div class="fq-notice am-modal-dialog">
+            <div class="am-modal-hd"  style="background:#f16132; color:white;">最新代理公告
+                <a href="javascript: void(0)" class="am-close am-close-spin" style="color:white;opacity:1" data-am-modal-close>&times;</a>
+            </div>
+            <div class="am-modal-bd am-text-left  am-text-sm">
+                <div class="fq-notice-title am-padding-sm" id="notice_title"></div>
+                <div class="am-margin-sm am-text-xs am-scrollable-vertical" style="color: #6f6f6f" id="notice_content">
+								</div>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript">
+    if(document.getElementById("scrolltext")){
+				var scrollup = new ScrollText("scrolltext");
+				scrollup.LineHeight = 24;        //单排文字滚动的高度										
+				scrollup.Amount = 1;            //注意:子模块(LineHeight)一定要能整除Amount.
+				scrollup.Delay = 10;           //延时
+				scrollup.Start();             //文字自动滚动
+				scrollup.Direction = "up"; //文字向下滚动
+			}
+    $(function() {
+        $('.js_notice').click(function() {
+
+            var $_this = $(this).children('span');
+            $('#notice_title').text($_this.text());
+            $('#notice_content').html($_this.attr('data-content'));
+            $('#notice_detail').modal();
+        });
+    });
+</script>
+
+<div id="dd_no" style="display:none" class="fq-order-details fq-background-white am-cf am-padding-vertical-xs">
+            <div class="am-cf am-margin-right"> <i class="am-fr iconfont icon-icongb"></i></div>
+            <img class="am-block am-center am-text-center" src="../addons/imgs/order-lose.png">
+            <div class="fq-order-gray am-text-center">查无此订单号</div>
+</div>
+
+
+<div id="dd_ok" style="display:none"  class="fq-order-details fq-background-white am-cf am-padding-vertical-xs am-padding-horizontal-sm">
+            <div class="am-margin-bottom-xs am-cf">
+                    <div class="am-cf">
+                        <img id="dd_pic" class="fq-details-img am-fl" src=""/>
+                        <div class="fq-details-title am-inline-block am-fr am-padding-left-xs">
+                            <i class="am-fr iconfont icon-icongb"></i>
+<div class="fq-order-gray am-fl line-clamp am-text-sm" id="dd_tit"></div>
+                        </div>
+                        
+						
+						<div class="fq-text-white am-cf am-margin-left-xs am-inline-block am-text-sm am-padding-horizontal-sm am-round" id="dd_sta"></div>
+
+						<div id="dd_count_div" class="fq-order-settlement fq-text-white am-cf am-margin-left-xs am-inline-block am-text-sm am-padding-horizontal-sm am-round" style="background: #0A6880;display:none"><a style="color:#ffffff" href="#" id="dd_count"></a></div>
+
+
+</div>
+                    
+					
+					
+					
+					<ul class="am-avg-sm-3 am-text-sm am-margin-vertical-xs">
+                        <li>
+                            <span class="fq-order-gray am-text-xs am-margin-bottom-sm">付款金额</span>
+                            <br />
+                            <strong>￥<span id="dd_fkfee"></span></strong>
+                        </li>
+                        <li>
+                            <span id="dd_lv" class="fq-order-gray am-text-xs am-margin-bottom-sm">成交预估收入</span>
+                            <br />
+                            <strong>￥<span id="dd_srfee"></span></strong>
+                        </li>
+                        <li>
+                            <span class="fq-order-gray am-text-xs am-margin-bottom-sm">收入来源</span>
+                            <br />
+                            <strong id="dd_sptit"></strong>
+                        </li>
+                    </ul>    
+                    <div class="fq-order-time am-text-xs">
+                        <span id="dd_ctime"></span>创建&nbsp;&nbsp;&nbsp;&nbsp;<span id="dd_etime_tit" style="display:none"><span id="dd_etime"></span>结算</span>
+                    </div>
+                </div>
+</div>
+<div style="color: #2EB0FF;height:24px;line-height:24px;margin:0 auto;font-size:12px;" class="js_notice">
+<ul id="scrolltext" class="noticTipTxt">
+<li>
+<img src="../addons/imgs/tip2.png" style="width:1.2rem;height:1.2rem;margin-top:-3px">&nbsp;</li>
+</ul>
+</div>
+<style>
+.noticTipTxt{height:34px;line-height:22px;overflow:hidden;color:#2EB0FF;padding-top:7px}
+.noticTipTxt li{height:24px;line-height:22px;color:#2EB0FF;float:left;height:24px;overflow:hidden;}
+.noticTipTxt a{color:#2EB0FF;font-size:12px;text-decoration:none;}
+.noticTipTxt a:hover{color:#2EB0FF;text-decoration:underline;}
+</style>
+
+    <div class="fq-order-today am-padding-vertical-sm">
+    <ul class="fq-background-white am-avg-sm-2 am-padding-vertical-xs">
+        <li>
+            <div class="fq-today-income fq-background-white am-center am-text-center am-padding-xs">
+                <div class="fq-icome-round am-round am-padding-xs">
+                    <div class="fq-background-white am-text-sm am-round am-vertical-align">
+                        <a class="am-vertical-align-middle" href="http://www.ayatt.cn/app/index.php?i=109&c=entry&op=t&shopid=5460&do=uc_shop_order_all&m=bsht_tbkdl&key=&openid=">
+                                                    <strong class="fq-icome-num am-text-lg">￥<span>0</span></strong>
+                            <br />
+                            <span class="fq-order-gray am-text-xs am-vertical-align-middle">今日成交预估</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="fq-today-volume fq-background-white am-center am-text-center am-padding-xs">
+                <div class="fq-volume-round am-round am-padding-xs">
+                    <div class="fq-background-white am-text-sm am-round am-vertical-align">
+                         <a class="am-vertical-align-middle" href="http://www.ayatt.cn/app/index.php?i=109&c=entry&op=y&shopid=5460&do=uc_shop_order_all&m=bsht_tbkdl&key=&openid=">
+                                                    <strong class="fq-icome-num am-text-lg">￥<span>0</span></strong>
+                            <br />
+                            <span class="fq-order-gray am-text-xs am-vertical-align-middle">昨日成交预估</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="fq-balance fq-background-white am-padding-vertical-xs am-padding-horizontal-sm">
+    	<div class="am-text-sm">账户余额：</div>
+	<div class="fq-balance-num am-cf am-padding-vertical-sm am-text-center">
+		<div>
+			<sup class="am-text-sm">￥</sup>
+			<span class="am-text-xl">0</span>
+			<a class="am-padding-horizontal am-text-sm" href="./index.php?i=109&c=entry&fm=uc_shop&openid=&do=uc_shop_ti&m=bsht_tbkdl">提现</a>		</div>
+         <div class="am-text-xs" style="color:#B7B7B7"><i class="iconfont icon-tishi"></i> 当前用户未提现的账户余额</div>
+	</div>
+	
+    <ul class="am-avg-sm-2 am-text-center">
+        <li class="am-padding-vertical-sm">
+            <a class="am-inline-block" style="color:#333;" href="http://www.ayatt.cn/app/index.php?i=109&c=entry&op=m2&shopid=5460&do=uc_shop_order_all&m=bsht_tbkdl&orderstatus=1&key=&openid=">
+			<span class="am-text-sm">￥<span class="month_income">14.21</span></span>
+            <br />
+            <span class="fq-order-gray am-text-xs">本月结算预估收入</span>
+			</a>
+        </li>
+        <li class="am-padding-vertical-sm">
+            <a class="am-inline-block" style="color:#333;" href="http://www.ayatt.cn/app/index.php?i=109&c=entry&op=mm2&shopid=5460&do=uc_shop_order_all&m=bsht_tbkdl&orderstatus=1&key=&openid=">
+			<span class="am-text-sm">￥<span class="last_month_income">0</span></span>
+            <br />
+            <span class="fq-order-gray am-text-xs">上月结算预估收入</span>
+			</a>
+        </li>
+		<li class="am-padding-vertical-sm">
+            <a class="am-inline-block" style="color:#333;" href="http://www.ayatt.cn/app/index.php?i=109&c=entry&op=all&shopid=5460&do=uc_shop_order_all&m=bsht_tbkdl&orderstatus=1&key=&openid=">
+			<span class="am-text-sm"><span class="month_income">3单<br>3+0+0</span></span>
+            <br />
+            <span class="fq-order-gray am-text-xs">总成交订单</span>
+			</a>
+        </li>
+        <li class="am-padding-vertical-sm">
+            <a class="am-inline-block" style="color:#333;" href="http://www.ayatt.cn/app/index.php?i=109&c=entry&op=all&shopid=5460&do=uc_shop_order_all&m=bsht_tbkdl&orderstatus=1&key=&openid=">
+			<span class="am-text-sm"><span class="last_month_income">￥0<br>0+0+0</span></span>
+            <br />
+            <span class="fq-order-gray am-text-xs">总结算佣金</span>
+			</a>
+        </li>
+    </ul>
+     <div class="am-text-xs am-text-center" style="color:#B7B7B7"><i class="iconfont icon-tishi"></i> 本月结算预估收入以本月确认收货订单为准<br><i class="iconfont icon-tishi"></i> 成交=结算+付款订单，结算=确认收货订单</div>
+</div>
+
+<div class="fq-statistics fq-background-white am-padding-vertical-xs am-padding-horizontal-sm am-margin-top-sm">
+    <div class="am-text-sm">
+        <span class="fq-square am-fl am-margin-right-xs" style="background:#FF3F79"></span>
+        今日成交统计
+    </div>
+    <ul class="am-avg-sm-3 am-text-center">
+        <li class="am-padding-vertical-sm">
+             <a class="am-inline-block" style="color:#333;" href="http://www.ayatt.cn/app/index.php?i=109&c=entry&op=t&shopid=5460&do=uc_shop_order&m=bsht_tbkdl&key=&openid=">
+                            <i class="iconfont icon-jinbi-copy" style="color:#FF3F79"></i>
+                <br />
+                <span class="am-text-sm">￥<span>0</span></span>
+                <br />
+                <span class="fq-order-gray am-text-xs">自产成交预估</span>
+            </a> 
+        </li>
+                <li class="am-padding-vertical-sm">
+            <i class="iconfont icon-business_line" style="color:#FF3F79"></i>
+            <br />
+            <span class="am-text-sm">￥<span id="yesterday_agent_income">0</span></span>
+            <br />
+            <span class="fq-order-gray am-text-xs">Lv2贡献成交</span>
+        </li>
+		        		<li class="am-padding-vertical-sm">
+            <i class="iconfont icon-baojiadan" style="color:#FF3F79"></i>
+            <br />
+            <span class="am-text-sm">￥<span id="yesterday_agent_income">0</span></span>
+            <br />
+            <span class="fq-order-gray am-text-xs">Lv3贡献成交</span>
+        </li>
+		    </ul>
+</div>
+
+<div class="fq-statistics fq-background-white am-padding-vertical-xs am-padding-horizontal-sm am-margin-top-sm">
+    <div class="am-text-sm">
+        <span class="fq-square am-fl am-margin-right-xs"></span>
+        昨日成交统计
+    </div>
+    <ul class="am-avg-sm-3 am-text-center">
+        <li class="am-padding-vertical-sm">
+            <a class="am-inline-block" style="color:#333;" href="http://www.ayatt.cn/app/index.php?i=109&c=entry&op=y&shopid=5460&do=uc_shop_order&m=bsht_tbkdl&key=&openid=">
+                            <i class="iconfont icon-jinbi-copy"></i>
+                <br />
+                <span class="am-text-sm">￥<span id="yesterday_own_income">0</span></span>
+                <br />
+                <span class="fq-order-gray am-text-xs">自产成交预估</span>
+            </a> 
+        </li>
+		        <li class="am-padding-vertical-sm">
+            <i class="iconfont icon-business_line"></i>
+            <br />
+            <span class="am-text-sm">￥<span id="yesterday_agent_income">0</span></span>
+            <br />
+            <span class="fq-order-gray am-text-xs">Lv2贡献成交</span>
+        </li>
+		        		<li class="am-padding-vertical-sm">
+            <i class="iconfont icon-baojiadan"></i>
+            <br />
+            <span class="am-text-sm">￥<span id="yesterday_agent_income">0</span></span>
+            <br />
+            <span class="fq-order-gray am-text-xs">Lv3贡献成交</span>
+        </li>
+		    </ul>
+</div>
+
+
+
+
+<div class="fq-statistics fq-background-white am-padding-vertical-xs am-padding-horizontal-sm am-margin-top-sm">
+    <div class="am-text-sm">
+        <span class="fq-square am-fl am-margin-right-xs" style="background:#7BD040"></span>
+        本月成交统计
+    </div>
+    <ul class="am-avg-sm-3 am-text-center">
+        <li class="am-padding-vertical-sm">
+            <a class="am-inline-block" style="color:#333;" href="http://www.ayatt.cn/app/index.php?i=109&c=entry&op=m&shopid=5460&do=uc_shop_order&m=bsht_tbkdl&key=&openid=">
+                            <i class="iconfont icon-jinbi-copy" style="color:#7BD040"></i>
+                <br />
+                <span class="am-text-sm">￥<span id="month_own_income">14.21</span></span>
+                <br />
+                <span class="fq-order-gray am-text-xs">自产成交预估</span>
+            </a> 
+        </li>
+		        <li class="am-padding-vertical-sm">
+            <i class="iconfont icon-business_line" style="color:#7BD040"></i>
+            <br />
+            <span class="am-text-sm">￥<span id="month_agent_income">0</span></span>
+            <br />
+            <span class="fq-order-gray am-text-xs">Lv2贡献成交</span>
+        </li>
+				        <li class="am-padding-vertical-sm">
+            <i class="iconfont icon-baojiadan" style="color:#7BD040"></i>
+            <br />
+            <span class="am-text-sm">￥<span id="month_agent_income">0</span></span>
+            <br />
+            <span class="fq-order-gray am-text-xs">Lv3贡献成交</span>
+        </li>
+				<li class="am-padding-vertical-sm">
+            <a class="am-inline-block" style="color:#333;" href="http://www.ayatt.cn/app/index.php?i=109&c=entry&op=m2&shopid=5460&do=uc_shop_order&m=bsht_tbkdl&orderstatus=1&key=&openid=">
+                            <i class="iconfont icon-order_line" style="color: #9BD040;"></i>
+                <br />
+				<span class="am-text-sm">￥<span id="last_month_own_count">14.21</span></span>
+                <br />
+                <span class="fq-order-gray am-text-xs">自产结算收入</span>
+            </a> 
+        </li>
+		        <li class="am-padding-vertical-sm">
+            <i class="iconfont icon-business_line" style="color: #9BD040;"></i>
+            <br />
+			<span class="am-text-sm">￥<span id="last_month_agent_count">0</span></span>
+            <br />
+            <span class="fq-order-gray am-text-xs">Lv2贡献结算</span>
+        </li>
+						<li class="am-padding-vertical-sm">
+            <i class="iconfont icon-baojiadan" style="color: #9BD040;"></i>
+            <br />
+			<span class="am-text-sm">￥<span id="last_month_agent_count">0</span></span>
+            <br />
+            <span class="fq-order-gray am-text-xs">Lv3贡献结算</span>
+        </li>
+		    </ul>
+</div>
+
+<div class="fq-statistics fq-background-white am-padding-vertical-xs am-padding-horizontal-sm am-margin-top-sm">
+    <div class="am-text-sm">
+        <span class="fq-square am-fl am-margin-right-xs" style="background: linear-gradient(#17EDFF,#2EB0FF);"></span>
+        上月成交&结算统计
+    </div>
+    <ul class="am-avg-sm-3 am-text-center">
+        <li class="am-padding-vertical-sm">
+            <a class="am-inline-block" style="color:#333;" href="http://www.ayatt.cn/app/index.php?i=109&c=entry&op=mm&shopid=5460&do=uc_shop_order&m=bsht_tbkdl&key=&openid=">
+                            <i class="iconfont icon-jinbi-copy" style="color: #17E0FF"></i>
+                <br />
+                <span class="am-text-sm">￥<span id="last_month_own_income">0</span></span>
+                <br />
+                <span class="fq-order-gray am-text-xs">自产成交预估</span>
+            </a> 
+        </li>
+		        <li class="am-padding-vertical-sm">
+            <i class="iconfont icon-business_line" style="color: #17E0FF"></i>
+            <br />
+            <span class="am-text-sm">￥<span id="last_month_agent_income">0</span></span>
+            <br />
+            <span class="fq-order-gray am-text-xs">Lv2贡献成交</span>
+        </li>
+						<li class="am-padding-vertical-sm">
+            <i class="iconfont icon-baojiadan" style="color: #17E0FF"></i>
+            <br />
+            <span class="am-text-sm">￥<span id="last_month_agent_income">0</span></span>
+            <br />
+            <span class="fq-order-gray am-text-xs">Lv3贡献成交</span>
+        </li>
+		        <li class="am-padding-vertical-sm">
+            <a class="am-inline-block" style="color:#333;" href="http://www.ayatt.cn/app/index.php?i=109&c=entry&op=mm2&shopid=5460&do=uc_shop_order&m=bsht_tbkdl&orderstatus=1&key=&openid=">
+                            <i class="iconfont icon-order_line" style="color: #2EB0FF;"></i>
+                <br />
+				<span class="am-text-sm">￥<span id="last_month_own_count">0</span></span>
+                <br />
+                <span class="fq-order-gray am-text-xs">自产结算收入</span>
+            </a> 
+        </li>
+		        <li class="am-padding-vertical-sm">
+            <i class="iconfont icon-business_line" style="color: #2EB0FF;"></i>
+            <br />
+			<span class="am-text-sm">￥<span id="last_month_agent_count">0</span></span>
+            <br />
+            <span class="fq-order-gray am-text-xs">Lv2贡献结算</span>
+        </li>
+						<li class="am-padding-vertical-sm">
+            <i class="iconfont icon-baojiadan" style="color: #2EB0FF;"></i>
+            <br />
+			<span class="am-text-sm">￥<span id="last_month_agent_count">0</span></span>
+            <br />
+            <span class="fq-order-gray am-text-xs">Lv3贡献结算</span>
+        </li>
+		    </ul>
+</div>
+
+
+
+
+
+
+<script>
+    $('.icon-icongb').click(function(){
+        $('.fq-order-details').fadeOut(500);
+		$("#orderid").val('');
+    });
+	
+    
+    function search(){
+        var nameValue=$.trim($("#orderid").val());  
+        if (nameValue.match(/^\d{16}/)==null && nameValue){  
+            $('#fq_alert_info').text('订单号为16位数字');
+            $('#fq_alert').modal();
+            return false;  
+        }
+
+		if (!nameValue){  
+            $('#fq_alert_info').text('请输入要查询的订单号');
+            $('#fq_alert').modal();
+            return false;  
+        }
+if(nameValue){
+	    $('#dd_count_div').hide();
+		var postssurl = "./index.php?i=109&c=entry&shopid=5460&openid=&do=abc_getorderinfo&m=bsht_tbkdl&orderid="+nameValue;
+$.post(postssurl, function(dat){
+dat = eval('('+dat+')');
+if (dat.status==1) {
+	$('#dd_no').hide();
+	$('#dd_ok').hide();
+	$('#dd_ok').fadeIn(500);
+	$('#dd_pic').addClass('item_image_'+dat.iid);
+	$('#dd_sta').removeClass('fq-order-settlement');
+	$('#dd_sta').removeClass('fq-order-payment');
+	$('#dd_sta').removeClass('fq-order-invalid');
+	$('#dd_sta').addClass('fq-order-'+dat.sta2);
+	$('#dd_sta').html(dat.sta);
+	$('#dd_tit').html(dat.tit);
+	$('#dd_sptit').html(dat.sptit);
+	$('#dd_fkfee').html(dat.fkfee);
+	$('#dd_srfee').html(dat.srfee);
+	$('#dd_ctime').html(dat.ctime);
+	if(dat.count>1){
+	$('#dd_count_div').show();
+	$('#dd_count').html("共计"+dat.count+"订单");
+	$('#dd_count').attr("href","./index.php?i=109&c=entry&shopid=5460&openid=&do=uc_shop_order_zdd2&m=bsht_tbkdl&orderid="+nameValue);
+	}
+
+if(dat.lv>1){
+$('#dd_lv').html('Lv'+dat.lv+'预估贡献');
+}else{
+$('#dd_lv').html('预估收入');
+}
+
+
+if(dat.etime==0){
+ $('#dd_etime_tit').hide();
+}else{
+ $('#dd_etime_tit').show();
+ $('#dd_etime').html(dat.etime);
+}
+
+	api_get_item_image(dat.iid);
+}else{
+	$('#dd_ok').hide();
+	$('#dd_no').hide();
+    $('#dd_no').fadeIn(500);
+}
+});
+		
+    }}
+        
+    function api_get_item_image(item_id){
+        $.ajax({
+            url: "https://acs.m.taobao.com/h5/mtop.taobao.detail.getdetail/6.0/?&api=mtop.taobao.detail.getdetail&v=6.0&ttid=2013%40taobao_h5_1.0.0&type=jsonp&dataType=jsonp&data=%7B%22itemNumId%22%3A%22" + item_id + "%22%7D",
+            dataType: 'jsonp',
+            jsonp: 'callback',
+            success: function (result) {
+            console.log(result);
+                var add_image = "http:" + result.data.item.images[1];
+                var item_image = add_image + '_160x160.jpg';
+                console.log(item_id);
+                console.log(item_image)
+                $('.item_image_'+item_id).attr('src', item_image);
+            }
+        })
+    }
+</script>
+<script>
+function back(){
+        window.history.back();
+     }
+</script>
+
+<script>
+function surl(){
+        $('#notice_surl').modal();
+     }
+</script>

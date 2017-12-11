@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=640" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-title" content="">
+		<meta name="format-detection" content="telephone=no">
+		<title>   老虎优选 </title>
+		<link rel="stylesheet" href="./css/style.css">
+		<link rel="stylesheet" href="./css/slicy.css">
+		<link rel="stylesheet" href="./css/glide.css">
+		<link rel="stylesheet" href="./css/zys_style.css">
+		<script type="text/javascript" src="./js/jquery.min.js"></script>
+
+	</head>
+
+	<body>
+		<div class="layout">
+			<div class="header" style="background:#ff3100">
+				<div class="left">
+					<a href="javascript:void(0);" onclick="history.go(-1);" class="back"></a>
+				</div>
+				<div class="search">
+					<form id="search-form" action="./index.php?i=3&c=entry&do=cqlist&m=tiger_newhu" method="get">
+						<input type="hidden" name="i" value="3">
+		                <input type="hidden" name="c" value="entry">
+		                <input type="hidden" name="dluid" value="">
+		                <input type="hidden" name="pid" value="mm_13157221_17524774_63558203">
+		                <input type="hidden" name="m" value="tiger_newhu">
+		                		                <input type="hidden" name="do" value="cqlist">
+		                		                <input type="hidden" name="zn" value="1">
+						<input type="text" class="txt" name="key" id="key" value="" placeholder="搜索你想要的宝贝" />
+						<input type="submit" class="submit" name='' id='' value="" />
+					</form>
+					<div class="moregd" id="moregd">
+						<ul id="keylist"><li>sss</li></ul>
+					</div>
+					<style>
+						.moregd{
+							border: 1px #f4f4f4 solid;
+							position: absolute;
+							z-index: 10000;
+							width: 99.5%;
+							top:45px;
+							background: #ffffff;
+							display: none;
+						}
+						.moregd li{padding-left: 10px;font-size: 18px;}
+						.moregd li a{color: #545454;}
+					</style>
+					<script>
+					$('#key').bind('input propertychange',function(){
+		            	var gdkey=$(this).val();
+		            	var cjsszn="0";
+		            	if(gdkey){
+		            		$("#moregd").show();  
+		            		$.ajax({
+					            url: "https://suggest.taobao.com/sug?code=utf-8&q="+gdkey+"&callback=jsonp",
+					            dataType: 'jsonp',
+					            jsonp: 'callback',
+					            success: function (result) {
+					            	console.log(result);
+					            	if(result.result){
+					            		var len = result.result.length;
+					            		var gdkey = '';
+					            		if(len){
+					            			for (var i = 0; i < len; i++) {
+						                        gdkey+= '<li id="liskeyname">'+result.result[i][0]+'</li>';
+						                        //console.log(result.result[i][0]);
+						                    }
+						            		$("#keylist").html(gdkey);
+						            		$('#moregd li').click(function(){
+						            			$("#key").val($(this).text());
+												$("#moregd").hide();
+												if(cjsszn==2){
+													$tzzulr="./index.php?i=3&c=entry&dluid=&pid=mm_13157221_17524774_63558203&zn=0&do=newcat&m=tiger_newhu&key="+$(this).text();
+												}else{
+													$tzzulr="./index.php?i=3&c=entry&dluid=&pid=mm_13157221_17524774_63558203&zn=0&do=cqlist&m=tiger_newhu&key="+$(this).text();
+												}
+												window.location.href=$tzzulr;
+											})
+					            		}else{
+					            			$("#moregd").hide();
+					            		}					            		
+					            	}
+					            }
+					        });		                    
+		               }else{
+		                	$("#moregd").hide();  
+		               }
+					});	
+					
+					
+					</script>
+				</div>
+				<div class="right">
+					<a href="./index.php?i=3&c=entry&pid=mm_13157221_17524774_63558203&dluid=&do=index&m=tiger_newhu" class="home"></a>
+				</div>
+			</div>
+			<div class="s_menu" id="s_menu" style="display: none;">
+				<ul>
+					<li class="all_kind" id="all_kind">
+						<a href="javascript:void(0);" class="title_a">全部分类<i></i></a>
+						<dl style="display: none;">
+														<dd><a href="./index.php?i=3&c=entry&type=1&px=&pid=mm_13157221_17524774_63558203&dluid=&key=&do=Newcat&m=tiger_newhu">女装</a></dd>
+														<dd><a href="./index.php?i=3&c=entry&type=2&
+5ae
+px=&pid=mm_13157221_17524774_63558203&dluid=&key=&do=Newcat&m=tiger_newhu">男装</a></dd>
+														<dd><a href="./index.php?i=3&c=entry&type=3&px=&pid=mm_13157221_17524774_63558203&dluid=&key=&do=Newcat&m=tiger_newhu">内衣</a></dd>
+														<dd><a href="./index.php?i=3&c=entry&type=4&px=&pid=mm_13157221_17524774_63558203&dluid=&key=&do=Newcat&m=tiger_newhu">美妆</a></dd>
+														<dd><a href="./index.php?i=3&c=entry&type=5&px=&pid=mm_13157221_17524774_63558203&dluid=&key=&do=Newcat&m=tiger_newhu">配饰</a></dd>
+														<dd><a href="./index.php?i=3&c=entry&type=6&px=&pid=mm_13157221_17524774_63558203&dluid=&key=&do=Newcat&m=tiger_newhu">鞋品</a></dd>
+														<dd><a href="./index.php?i=3&c=entry&type=7&px=&pid=mm_13157221_17524774_63558203&dluid=&key=&do=Newcat&m=tiger_newhu">箱包</a></dd>
+														<dd><a href="./index.php?i=3&c=entry&type=8&px=&pid=mm_13157221_17524774_63558203&dluid=&key=&do=Newcat&m=tiger_newhu">儿童</a></dd>
+														<dd><a href="./index.php?i=3&c=entry&type=9&px=&pid=mm_13157221_17524774_63558203&dluid=&key=&do=Newcat&m=tiger_newhu">母婴</a></dd>
+														<dd><a href="./index.php?i=3&c=entry&type=10&px=&pid=mm_13157221_17524774_63558203&dluid=&key=&do=Newcat&m=tiger_newhu">居家</a></dd>
+														<dd><a href="./index.php?i=3&c=entry&type=11&px=&pid=mm_13157221_17524774_63558203&dluid=&key=&do=Newcat&m=tiger_newhu">美食</a></dd>
+										
+3a4a
+				<dd><a href="./index.php?i=3&c=entry&type=12&px=&pid=mm_13157221_17524774_63558203&dluid=&key=&do=Newcat&m=tiger_newhu">数码</a></dd>
+														<dd><a href="./index.php?i=3&c=entry&type=13&px=&pid=mm_13157221_17524774_63558203&dluid=&key=&do=Newcat&m=tiger_newhu">家电</a></dd>
+														<dd><a href="./index.php?i=3&c=entry&type=14&px=&pid=mm_13157221_17524774_63558203&dluid=&key=&do=Newcat&m=tiger_newhu">其它</a></dd>
+													</dl>
+					</li>
+					<li class="pro_sort" id="pro_sort"><a href="###" class="title_a">商品排序<i></i></a>
+						<dl style="display: none;">
+							<dd><a href="./index.php?i=3&c=entry&type=1&px=&pid=mm_13157221_17524774_63558203&dluid=&key=&do=Newcat&m=tiger_newhu">默认排序</a></dd>
+							<dd><a href="./index.php?i=3&c=entry&type=1&px=1&pid=mm_13157221_17524774_63558203&dluid=&key=&do=Newcat&m=tiger_newhu">销量最高</a></dd>
+							<dd><a href="./index.php?i=3&c=entry&type=1&px=2&pid=mm_13157221_17524774_63558203&dluid=&key=&do=Newcat&m=tiger_newhu">价格最低</a></dd>
+							<dd><a href="./index.php?i=3&c=entry&type=1&px=4&pid=mm_13157221_17524774_63558203&dluid=&key=&do=Newcat&m=tiger_newhu">优惠券</a></dd>
+						</dl>
+					</li>
+					<li class="filter" id="filter"><a href="###" class="title_a" style="width:183px">筛选<i></i></a>
+						<div class="f_div" style="display: none;">
+							<form id="search-form" action="./index.php?i=3&c=entry&do=cqlist&m=tiger_newhu" method="get">
+								<input type="hidden" name="i" value="3">
+				                <input type="hidden" name="c" value="entry">
+				                <input type="hidden" name="m" value="tiger_newhu">
+				                				                <input type="hidden" name="do" value="cqlist">
+				                				                <input type="hidden" name="pid" value="mm_13157221_17524774_63558203">
+				                <input type="hidden" name="dluid" value="">
+				                <input type="hidden" id="key" name="key"  value="" />
+				                <input type="hidden" id="tm" name="tm"  value="" />
+				                <input type="hidden" id="tm" name="zn"  value="0" />
+				                <input type="hidden" id="hd" name="hd"  value="" />
+								<div class="input_area">
+									<div>价格区间(元)</div>
+									<input type="text" name="price1" id="" value="" class="inp_min"/>
+									<span></span>
+									<input type="text" name="price2" id="" value="" class="inp_max"/>
+								</div>
+								<div class="btn">
+									<input type="submit" value="确认搜索"/>
+								</div>
+							</form>
+						</div>
+					</li>
+					<li><a href="javascript:void(0);" class="title_qr" id="title_qr"><img class="qrCode" src="http://www.auiju.cn/addons/tiger_newhu/template/mobile/tbgoods/style99/imgs/zys_img65.png"/></a></li>
+				</ul>
+			</div>			<div class="goods_nav">
+				<ul>
+					<li class="selected">
+						<a href="./index.php?i=3&c=entry&type=1&px=&pid=mm_13157221_17524774_63558203&dluid=&key=&do=Newcat&m=tiger_newhu">综合</a>
+					</li>
+					<li >
+						<a href="./index.php?i=3&c=entry&type=1&px=1&pid=mm_13157221_17524774_63558203&dluid=&key=&do=Newcat&m=tiger_newhu">热销</a>
+					</li>
+					<li >
+						<a href="./index.php?i=3&c=entry&type=1&px=4&pid=mm_13157221_17524774_63558203&dluid=&key=&do=Newcat&m=tiger_newhu">券额</a>
+					</li>
+					<li  style="width:159px;">
+						<a href="./index.php?i=3&c=entry&type=1&px=2&pid=mm_13157221_17524774_63558203&dluid=&key=&do=Newcat&m=tiger_newhu">价格</a>
+					</li>
+				</ul>
+			</div>
+            <!--专题图片-->
+						<!--聚划算-->
+						<!--淘抢购-->
+			            <!--秒杀-->
+				
+						
+									<!--列表3-->
+			<div class="h_jx" style="padding-bottom: 120px;background-color: #ffffff;">
+				<div class="body" id="box_list">
+					<ul id="goods_box">
+										
+					</ul>
+					<div class="more" id='mores'>
+						<a href="javascript:void(0);">加载更多产品</a>
+					</div>
+				</div>
+			</div>
+			<!--列表3结束-->
+																					
+			<div class="mask" id="mask" style="display: none;">
+		
+			</div>
+			<div class="qr_img" id="qr_img" style="display: none;">
+				<img src="http://www.auiju.cn/attachment/images/3/2017/10/PdZ7vmRu0Hv4unOdvyM7N7e204B704.jpg"/>
+			</div>
+			<div class="footer">
+	<ul>
+		<!--class="selected"-->
+				<li >
+			<a href="http://www.auiju.cn/app/index.php?i=3&c=entry&do=index&m=tiger_newhu&pid=mm_13157221_17524774_63558203&dluid="><i class="sy" style="background: url(./images/AJEkOsl3f5k84dEl32dfLjYJhJMlYT.png) no-repeat; background-size: 35px;"></i>首页</a>
+		</li>
+				<li >
+			<a href="http://www.auiju.cn/app/index.php?i=3&c=entry&do=lmsearch&m=tiger_newhu&pid=mm_13157221_17524774_63558203&dluid="><i class="sy" style="background: url(./images/Fsbv99T8N4tJt5V8369UtN5sS48xHZ.png) no-repeat; background-size: 35px;"></i>超级搜索</a>
+		</li>
+				<li >
+			<a href="http://www.auiju.cn/app/index.php?i=3&c=entry&hd=5&do=newcat&m=tiger_newhu&pid=mm_13157221_17524774_63558203&dluid="><i class="sy" style="background: url(./images/xk1zp81NQ16Y01014k4etWQWkKn4m8.png) no-repeat; background-size: 35px;"></i>视频直播</a>
+		</li>
+				<li >
+			<a href="http://www.auiju.cn/app/index.php?i=3&c=entry&do=member&m=tiger_newhu&pid=mm_13157221_17524774_63558203&dluid="><i class="sy" style="background: url(./images/Jw795a45wiL02i8Lp2Wm0lipML45PI.png) no-repeat; background-size: 35px;"></i>会员中心</a>
+		</li>
+				<li >
+			<a href="http://www.auiju.cn/app/index.php?i=3&c=entry&do=ddq&m=tiger_newhu&pid=mm_13157221_17524774_63558203&dluid="><i class="sy" style="background: url(./images/tQk9nc83KOzqqZc67P8tK9on3Qqn87.png) no-repeat; background-size: 35px;"></i>叮咚抢</a>
+		</li>
+			</ul>
+	<div href="###" class="toTop" id="toTop" style="display: none;"></div>
+</div>
+
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=64057271" charset="UTF-8"></script>
+				
+		</div>
+		<script type="text/javascript">
+		  var limit = 1;
+		</script>	
+
+		
+		<script type="text/javascript" src="./js/jquery.mobile-1.0.1.min.js"></script>
+		<script type="text/javascript" src="./js/jquery.glide.js"></script>
+		<script type="text/javascript" src="./js/script.js"></script>
+		<link rel="stylesheet" href="./css/dropload.css">
+<script src="./js/dropload.min.js"></script>
+	<script type="text/javascript">
+		function get_list(ty){
+		//	alert(limit);
+		    var pid="mm_13157221_17524774_63558203";
+		    var dluid=""
+		    var tj='';
+		    var lm='2';
+		    var newsstyle="lb3";
+            var lbratetype="0";
+		    if(ty==1){
+			   $("#box_list #goods_box").html('');
+			}else{
+			   $("#mores").html('<a href="#">卖命加载中...</a>');	   
+			}
+			
+			$.ajax({
+			    type : "post",
+			    url : "./index.php?i=3&c=entry&type=1&pid=mm_13157221_17524774_63558203&dluid=&rate=11&key=&do=Newcatpost&m=tiger_newhu",
+			    data : {
+			    	page:limit,
+			    },
+		        dataType : "json",		
+			    success : function(data) {
+			    	//alert(data.status);
+			    	if(data.status==1){
+								var list = data.content;
+								var content = '';
+								for(var i=0; i<list.length; i++){
+					if(newsstyle=='lb1'){
+						  content +='<li>';
+							if(list[i]['videoid']!=0){
+						     content +='<div class="img v_btn_img">';
+						   }else{
+						     content +='<div class="img">';
+						   }
+								content +='<a href="./index.php?i=3&c=entry&do=view&m=tiger_newhu'+'&lm='+lm+'&itemid='+list[i]['itemid']+'&pid='+pid+'&dluid='+dluid+'"><img src="'+list[i]['itempic']+'_200x200.jpg" style="width:200px; height:200px;"/></a>';
+							content +='</div>';
+							content +='<div class="txt">';
+							
+								if(list[i]['shoptype']=='B'){
+								content +='<h2><a href="./index.php?i=3&c=entry&do=view&m=tiger_newhu'+'&lm='+lm+'&itemid='+list[i]['itemid']+'&pid='+pid+'&dluid='+dluid+'" class="tmico">'+list[i]['itemtitle']+'</a></h2>';
+                              }else{
+                                content +='<h2><a href="./index.php?i=3&c=entry&do=view&m=tiger_newhu'+'&lm='+lm+'&itemid='+list[i]['itemid']+'&pid='+pid+'&dluid='+dluid+'">'+list[i]['itemtitle']+'</a></h2>';
+                              }
+								
+								content +='<dl>';
+								content +='	<dt>销量：<span>'+list[i]['itemsale']+'</span></dt>';
+								content +='	<dd>券后：<big>￥<span>'+list[i]['itemendprice']+'</span></big> <s>￥'+list[i]['itemprice']+'</s></dd>';
+								content +='</dl>';
+								content +='<div class="quan">';
+								content +='	<a href="./index.php?i=3&c=entry&do=view&m=tiger_newhu'+'&lm='+lm+'&itemid='+list[i]['itemid']+'&pid='+pid+'&dluid='+dluid+'">领券减'+list[i]['couponmoney']+'元<span>马上领券</span></a>';
+								content +='</div>';
+							content +='</div>';
+                            if(lbratetype==1){
+                              content +='<div class="jiang">';
+							  content +='	<span>奖</span><i>'+list[i]['rate']+'</i>';
+							  content +='</div>';
+                            }
+							
+						content +='</li>';
+					}
+					
+					if(newsstyle=='lb2'){
+						content +='<li>';
+							if(list[i]['videoid']!=0){
+						     content +='<div class="img v_btn_img">';
+						   }else{
+						     content +='<div class="img">';
+						   }
+							content +='	<a href="./index.php?i=3&c=entry&do=view&m=tiger_newhu'+'&lm='+lm+'&itemid='+list[i]['itemid']+'&pid='+pid+'&dluid='+dluid+'"><img src="'+list[i]['itempic']+'" style="width:640px; height:640px;"/></a>';
+							content +='</div>';
+							content +='<div class="txt">';
+								content +='<h2><a href="./index.php?i=3&c=entry&do=view&m=tiger_newhu'+'&lm='+lm+'&itemid='+list[i]['itemid']+'&pid='+pid+'&dluid='+dluid+'">'+list[i]['itemtitle']+'</a></h2>';
+								content +='<div class="tt">';
+								content +='	<dl>';
+									content +='	<dd>券后：<big>￥<span>'+list[i]['itemendprice']+'</span></big> <s>￥'+list[i]['itemprice']+'</s></dd>';
+								content +='	</dl>';
+                                    if(lbratetype==1){
+                                      content +='<div class="fan">';
+									  content +='	<span>奖</span><i>'+list[i]['rate']+'</i>';
+									  content +='</div>';
+                                    }
+									content +='<div class="quan">';
+									content +='	<a href="./index.php?i=3&c=entry&do=view&m=tiger_newhu'+'&lm='+lm+'&itemid='+list[i]['itemid']+'&pid='+pid+'&dluid='+dluid+'">领券减'+list[i]['couponmoney']+'元<span>马上领券</span></a>';
+									content +='</div>';
+								content +='</div>';
+						content +='</li>';
+					}
+					if(newsstyle=='lb3'){
+						content +='<li>';
+							if(list[i]['videoid']!=0){
+						     content +='<div class="img v_btn_img">';
+						   }else{
+						     content +='<div class="img">';
+						   }
+								content +='<a href="./index.php?i=3&c=entry&do=view&m=tiger_newhu'+'&lm='+lm+'&itemid='+list[i]['itemid']+'&pid='+pid+'&dluid='+dluid+'"><img src="'+list[i]['itempic']+'_300x300.jpg" style="width:300px; height:300px;" /></a>';
+							content +='</div>';
+							content +='<div class="txt">';
+							
+							if(list[i]['shoptype']=='B'){
+								content +='<h2><a href="./index.php?i=3&c=entry&do=view&m=tiger_newhu'+'&lm='+lm+'&itemid='+list[i]['itemid']+'&pid='+pid+'&dluid='+dluid+'" class="tmico">'+list[i]['itemtitle']+'</a></h2>';
+                              }else{
+                                content +='<h2><a href="./index.php?i=3&c=entry&do=view&m=tiger_newhu'+'&lm='+lm+'&itemid='+list[i]['itemid']+'&pid='+pid+'&dluid='+dluid+'">'+list[i]['itemtitle']+'</a></h2>';
+                              }
+							
+							content +='	<h4>';
+							content +='	<span class="l">现价￥'+list[i]['itemprice']+'</span>';
+							content +='	<font class="r">已售'+list[i]['itemsale']+'件</font>';
+							content +='</h4>';
+							content +='</div>';
+							content +='<div class="btn">';
+                             if(lbratetype==1){
+							  content +='	<div class="l">';
+							  content +='		<span>奖</span><i>'+list[i]['rate']+'元</i>';
+							  content +='	</div>';
+                             }
+							content +='	<div class="r">';
+								content +='	<dl>';
+							content +='			<dd>券后价：<big>￥<span>'+list[i]['itemendprice']+'</span></big></dd>';
+							content +='		</dl>';
+							content +='	</div>';
+							content +='</div>';
+							content +='<div class="quan">优惠券';
+							content +='	<span>'+list[i]['couponmoney']+'</span>';
+							content +='</div>';
+						content +='</li>	';
+					}
+					
+					if(newsstyle=='lb4'){
+						content +='<li>';
+							if(list[i]['videoid']!=0){
+						     content +='<div class="img v_btn_img">';
+						   }else{
+						     content +='<div class="img">';
+						   }
+								content +='<a href="./index.php?i=3&c=entry&do=view&m=tiger_newhu'+'&lm='+lm+'&itemid='+list[i]['itemid']+'&pid='+pid+'&dluid='+dluid+'">';
+								content +='	<img src="'+list[i]['itempic']+'_300x300.jpg" style="width:290px;height:290px"/>';
+								content +='	<h4>销量：<span>'+list[i]['itemsale']+'</span></h4>';
+								content +='</a>';
+							content +='</div>';
+							content +='<div class="txt">';
+
+                            if(list[i]['shoptype']=='B'){
+                               content +='	<h2><a href="./index.php?i=3&c=entry&do=view&m=tiger_newhu'+'&lm='+lm+'&itemid='+list[i]['itemid']+'&pid='+pid+'&dluid='+dluid+'" id="tmion">'+list[i]['itemtitle']+'</a></h2>';
+                            }else{
+                              content +='	<h2><a href="./index.php?i=3&c=entry&do=view&m=tiger_newhu'+'&lm='+lm+'&itemid='+list[i]['itemid']+'&pid='+pid+'&dluid='+dluid+'">'+list[i]['itemtitle']+'</a></h2>';
+                            }
+							content +='	<h4><big>￥'+list[i]['itemendprice']+'</big><s>￥'+list[i]['itemprice']+'</s> ';
+							 if(lbratetype==1){
+                               content +='<span class="fan"><span>奖</span><i>'+list[i]['rate']+'</i></span>';
+                             }
+							content +='</h4>';
+							content +='</div>';
+							content +='<div class="btn">';
+							content +='	<a href="./index.php?i=3&c=entry&do=view&m=tiger_newhu'+'&lm='+lm+'&itemid='+list[i]['itemid']+'&pid='+pid+'&dluid
+b62
+='+dluid+'"><i>领券减'+list[i]['couponmoney']+'元</i><span>马上领券</span></a>';
+							content +='</div>';
+						content +='</li>';
+					}
+					
+					if(newsstyle=='lb5'){
+						content +='<li>';
+							if(list[i]['videoid']!=0){
+						     content +='<div class="img v_btn_img">';
+						   }else{
+						     content +='<div class="img">';
+						   }
+							content +='	<a href="./index.php?i=3&c=entry&do=view&m=tiger_newhu'+'&lm='+lm+'&itemid='+list[i]['itemid']+'&pid='+pid+'&dluid='+dluid+'"><img src="'+list[i]['itempic']+'_200x200.jpg" style="width:160px;height:160px;"/></a>';
+							content +='</div>';
+							content +='<div class="txt">';
+							content +='	<h2><a href="./index.php?i=3&c=entry&do=view&m=tiger_newhu'+'&lm='+lm+'&itemid='+list[i]['itemid']+'&pid='+pid+'&dluid='+dluid+'">'+list[i]['itemtitle']+'</a></h2>';
+							content +='	<p><s>￥'+list[i]['itemprice']+'</s><br/>已抢'+list[i]['itemsale']+'<br/>';
+							content +='		<font>券后价：'+list[i]['itemendprice']+'元</font>';
+							content +='	</p>';
+                            if(lbratetype==1){
+							  content +='	<span class="fan"><span>奖</span><i>'+list[i]['rate']+'</i></span>';
+                            }
+							content +='</div>';
+							content +='<div class="btn">';
+							content +='	<a href="./index.php?i=3&c=entry&do=view&m=tiger_newhu'+'&lm='+lm+'&itemid='+list[i]['itemid']+'&pid='+pid+'&dluid='+dluid+'">';
+							content +='		<span>￥'+list[i]['couponmoney']+'</span>';
+							content +='		<font>立即购买</font>';
+							content +='	</a>';
+							content +='</div>';
+						content +='</li>';
+					}
+					
+					if(newsstyle=='lb6'){
+						content +='<li>';
+						   if(list[i]['videoid']!=0){
+						     content +='<div class="img v_btn_img">';
+						   }else{
+						     content +='<div class="img">';
+						   }
+							
+							content +='	<a href="./index.php?i=3&c=entry&do=view&m=tiger_newhu'+'&lm='+lm+'&itemid='+list[i]['itemid']+'&pid='+pid+'&dluid='+dluid+'"><img src="'+list[i]['itempic']+'_300x300.jpg" style="width: 204px;height:204px"/></a>';
+							content +='</div>';
+							content +='<div class="txt">';
+							content +='	<h2><a href="./index.php?i=3&c=entry&do=view&m=tiger_newhu'+'&lm='+lm+'&itemid='+list[i]['itemid']+'&pid='+pid+'&dluid='+dluid+'">'+list[i]['itemtitle']+'</a></h2>';
+							content +='	<dl>';
+							if(list[i]['shoptype']=='B'){
+							  content +='		<dt class="tmico">去天猫</dt>';
+							}else{
+						      content +='		<dt class="tbico">去淘宝</dt>';
+							}
+							content +='		<dd>销量：'+list[i]['itemsale']+'</dd>';
+							content +='		<dd><s>原价：'+list[i]['itemprice']+'元</s></dd>';
+							content +='		<dd><span>券后：'+list[i]['itemendprice']+'元</span></dd>';
+							content +='	</dl>';
+							content +='</div>';
+                             if(lbratetype==1){
+	
+1188
+						    content +='<div class="fan">';
+							    content +='	<h4><span>奖</span><i>'+list[i]['rate']+'</i></h4>';
+							    content +='</div>';
+                            }
+							content +='<a href="./index.php?i=3&c=entry&do=view&m=tiger_newhu'+'&lm='+lm+'&itemid='+list[i]['itemid']+'&pid='+pid+'&dluid='+dluid+'"><div class="quan">';
+							content +='	<h4>马上领券</h4>';
+							content +='	<h5>立减'+list[i]['couponmoney']+'元</h5>';
+							content +='</div></a>';
+						content +='</li>';
+					}
+					if(newsstyle=='lb7'){
+						content +='<li>';
+							content +='<a href="./index.php?i=3&c=entry&do=view&m=tiger_newhu'+'&lm='+lm+'&itemid='+list[i]['itemid']+'&pid='+pid+'&dluid='+dluid+'">';
+								if(list[i]['videoid']!=0){
+							       content +='<div class="img v_btn_img7">';
+							    }else{
+							        content +='<div class="img">';
+							    }
+								content +='	<img src="'+list[i]['itempic']+'_200x200.jpg" style="width:120px;height:120px"/>';
+								content +='</div>';
+								content +='<div class="txt">';
+								content +='	<h2>'+list[i]['itemtitle']+'</h2>';
+								content +='	<p><s>原价：'+list[i]['itemprice']+'元</s><br/>';
+								content +='		<font>优惠券：'+list[i]['couponmoney']+'元</font>';
+								content +='	</p>';
+								content +='</div>';
+								content +='<div class="btn">';
+								content +='	'+list[i]['itemendprice']+'元<br />券后价';
+								content +='</div>';
+							content +='</a>';
+						content +='</li>';
+					}
+					if(newsstyle=='lb8'){
+						content +='<li>';
+							   if(list[i]['videoid']!=0){
+							       content +='<div class="img v_btn_img7">';
+							    }else{
+							        content +='<div class="img">';
+							    }
+								content +='<a href="./index.php?i=3&c=entry&do=view&m=tiger_newhu'+'&lm='+lm+'&itemid='+list[i]['itemid']+'&pid='+pid+'&dluid='+dluid+'"><img src="'+list[i]['itempic']+'_300x300.jpg" style="width:290px;height:290px"/></a>';
+								content +='<label>已售'+list[i]['itemsale']+'件</label>';
+							content +='</div>';
+							content +='<div class="txt">';
+								content +='<h2>';
+								if(list[i]['shoptype']=='B'){
+									content +='<a href="./index.php?i=3&c=entry&do=view&m=tiger_newhu'+'&lm='+lm+'&itemid='+list[i]['itemid']+'&pid='+pid+'&dluid='+dluid+'" class="tmico">'+list[i]['itemtitle']+'</a></h2>';
+								}else{
+									content +='<a href="./index.php?i=3&c=entry&do=view&m=tiger_newhu'+'&lm='+lm+'&itemid='+list[i]['itemid']+'&pid='+pid+'&dluid='+dluid+'">'+list[i]['itemtitle']+'</a></h2>';
+								}
+								content +='<h4><big>&yen;'+list[i]['itemendprice']+'</big><s>&yen;'+list[i]['itemprice']+'</s> ';
+                                if(lbratetype==1){
+								  content +='<span class="fan">'+list[i]['rate']+'</span>';
+                                }
+								content +='</h4>';
+							content +='</div>';
+							content +='<div class="btn">';
+								content +='<a href="./index.php?i=3&c=entry&do=view&m=tiger_newhu'+'&lm='+lm+'&itemid='+list[i]['itemid']+'&pid='+pid+'&dluid='+dluid+'">领券减'+list[i]['couponmoney']+'元</a>';
+							content +='</div>';
+						content +='</li>';
+					}
+
+		
+				}
+                $("#box_list #goods_box").append(content);
+				//var aa = $(".goods-list li").innerWidth();
+                //$(".goods-list li img").css('height',aa);
+				if(list.length>1){
+					$("#mores").html('<a href="javascript:void(0);" onclick="get_list(0);">点击查看更多</a>');	
+				}else{
+					$("#mores").html('<a href="javascript:void(0);"></a>');
+					//$("#list_more").fadeOut(500);
+				}		
+                limit++;
+
+		//lazy_img();
+				    }else if(data.status==2){
+			    		$("#mores").html('<a href="javascript:void(0);">没有更多记录</a>');
+						//dialog("没有更多记录！");
+						//$("#list_more").fadeOut(500);
+		
+			    	}else{
+					    $("#mores").html('<a href="javascript:void(0);">没有更多记录</a>');
+						//dialog("没有更多记录！！");
+						//$("#list_more").fadeOut(500);
+					}    	
+			    },
+			    error : function(xhr, type) {
+		
+			    }
+			});
+			    
+		
+		}
+		 if(window.localStorage.getItem("url") == window.location.href && window.localStorage.getItem("top") != "null")
+		 {}
+		 else
+		 {
+			 get_list(0);
+			 }
+		
+		
+		
+		//==============自动加载=============
+		//获取滚动条当前的位置 
+		function getScrollTop() { 
+		var scrollT
+769
+op = 0; 
+		if (document.documentElement && document.documentElement.scrollTop) { 
+		scrollTop = document.documentElement.scrollTop; 
+		} 
+		else if (document.body) { 
+		scrollTop = document.body.scrollTop; 
+		} 
+		return scrollTop; 
+		} 
+		
+		//获取当前可是范围的高度 
+		function getClientHeight() { 
+		var clientHeight = 0; 
+		if (document.body.clientHeight && document.documentElement.clientHeight) { 
+		clientHeight = Math.min(document.body.clientHeight, document.documentElement.clientHeight); 
+		} 
+		else { 
+		clientHeight = Math.max(document.body.clientHeight, document.documentElement.clientHeight); 
+		} 
+		return clientHeight; 
+		} 
+		
+		//获取文档完整的高度 
+		function getScrollHeight() { 
+		return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight); 
+		} 
+		
+		
+		var u = navigator.userAgent;
+		var isiOSa = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+		//alert(isiOSa);
+				
+		$(window).scroll(function () { 
+			if(isiOSa){
+				if (getScrollTop() + getClientHeight() == getScrollHeight()) { 
+				 //alert("到达底部"); 
+				 get_list(0);
+				} 
+				//alert(888)
+			}else{
+				if (getScrollHeight() - getClientHeight() - getScrollTop() < 10) { 
+				 //alert("到达底部"); 
+				 get_list(0);
+				} 
+				//alert(999)
+			}
+			
+		});
+		
+		
+		//==============自动加载=============  
+	</script>	
+     <style>
+     	.goods_list .txt .tmico {
+				    background: url(http://www.auiju.cn/addons/tiger_newhu/template/mobile/tbgoods/style99/imgs/img32.png) no-repeat left center;
+				    background-position-y: 5px;
+				}
+               #tmion {
+                    background: url(http://www.auiju.cn/addons/tiger_newhu/template/mobile/tbgoods/style99/imgs/img32.png) no-repeat;background-position-y: 7px;
+                }
+
+            </style>
+	</body>
+
+</html>

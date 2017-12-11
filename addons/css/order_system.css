@@ -1,0 +1,248 @@
+body {
+	background: #F5F5F9;
+}
+
+input, input[type="text"]::-webkit-input-placeholder {
+	color: white;
+}
+
+.notice{height:22px;color:white;}
+.notice img{position: relative; top:4px;width: 16px;}
+.noticTipTxt{color:white;height:22px;line-height:22px;overflow:hidden;}
+.noticTipTxt li{height:22px;line-height:22px;}
+.noticTipTxt a{color:white;text-decoration:none;}
+.noticTipTxt a:hover{color:white;text-decoration:none;}
+
+.fq-order-gray {
+	color: #8F8686;
+}
+
+.main{
+	position:relative;
+}
+
+.fq-details-img {
+	width: 80px;
+	height: 80px;
+}
+
+.fq-details-title {
+    position:relative;
+    /*top:-12px;*/
+	width: calc(100% - 80px);
+}
+
+.fq-details-title .line-clamp {
+    overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	line-height: 1.6;
+	-webkit-width:calc(100% - 40px);
+	width: calc(100% - 40px);
+}
+
+.fq-order-payment {
+	background: #7BD040;
+}
+
+.fq-order-settlement {
+	background: #46C7E8;
+}
+
+.fq-order-invalid {
+	background: #E3E0DD;
+}
+
+.icon-icongb:before {
+    line-height:24px;
+	font-size: 24px;
+	color: #BDBCBC;
+}
+
+.fq-order-time {
+	color: #B7B7B7;
+}
+
+.fq-order-inquiry {
+	background: #f16132;
+	background: linear-gradient(to right,#e85729, #fa6a3b);
+}
+
+.fq-inquiry-head {
+	background-image: url("../imgs/background_top.png");
+	background-position: right;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.fq-inquiry-title {
+	letter-spacing: 1px;
+}
+
+.fq-inquiry-name {
+	color: #FFE85F;
+}
+
+.fq-inquiry-name .am-text-truncate{
+	position: relative;
+	top:6px;
+	-webkit-width:calc(50% - 60px);
+	width: calc(50% - 60px);
+}
+
+.fq-inquiry-mall,
+.fq-inquiry-mall:visited,
+.fq-inquiry-mall:hover,
+.fq-inquiry-mall:active,
+.fq-inquiry-mall:focus{
+	background: rgba(255,255,255,0.3);
+	color: white;
+}
+
+.fq-inquiry-mall i{
+	position: relative;
+	top: 1px;
+}
+
+.fq-inquiry-name img {
+	width: 30px;
+	height: 30px;
+	border: 2px solid #FFE85F;
+}
+
+
+
+.fq-inquiry-search {
+	width: 100%;
+	border: none;
+	background: #e05628;
+	border-radius: 4px;
+	-webkit-appearance: none;
+}
+
+.fq-order-inquiry .icon-fangdajing {
+	position: relative;
+	top: -24px;
+}
+
+.fq-order-today .am-avg-sm-2>li:nth-of-type(1){
+    border-right:2px solid #F5F5F9;
+}
+
+.fq-volume-round {
+	background: linear-gradient(#2EB0FF,#17EDFF);
+}
+
+.fq-icome-round {
+	background: linear-gradient(#FF3F79,#FF9C62);
+}
+.fq-icome-round,
+.fq-volume-round,
+.fq-icome-round div:first-child,
+.fq-volume-round div:first-child {
+	width: 100%;
+	height: 100%;
+}
+
+.fq-icome-num {
+    color:#333;
+}
+
+.fq-order-status {
+    background:#f8f8f8;
+    border-top:1px solid #f3e7e3;
+    border-bottom:1px solid #f3e7e3;
+}
+
+
+.fq-order-status .am-btn-default.am-active, .am-btn-default:active, .am-btn-default:focus, .am-btn-default:hover, .am-dropdown.am-active .am-btn-default.am-dropdown-toggle {
+    border:none;
+    background:none;
+}
+
+.fq-order-status .am-btn-default {
+    border:none;
+    text-align:center;
+}
+
+.fq-order-status .am-selected {
+    width:100%;
+    text-align:center;
+}
+
+    .fq-order-status .am-selected-status {
+        text-align:center;
+        display:inline-block;
+        float:none;
+        width:auto;
+
+    }
+
+.fq-order-status .am-dropdown-content:before,
+.fq-order-status .am-dropdown-content:after, .am-dropdown-content:before  {
+    border-bottom:none;
+}
+
+.fq-order-status .am-dropdown-content {
+    margin:1px 0 0 0;
+    border:0;
+    padding:0;
+    text-align:center;
+}
+
+    .fq-order-status .am-selected-list li {
+        border-bottom:1px solid #f3e7e3;
+    }
+
+    .fq-order-status .am-icon-check {
+        display:none;
+    }
+
+    .fq-order-status .am-checked {
+        color:#F36E32;
+    }
+
+
+.fq-today-income,
+.fq-today-volume {
+	width: 140px;
+	height: 140px;
+}
+
+.fq-square {
+	position: relative;
+	top: 6px;
+	width: 8px;
+	height: 8px;
+	background: #F36E32;
+}
+
+.fq-statistics ul li:nth-child(1),
+.fq-statistics ul li:nth-child(2) {
+	border-bottom: 1px solid #F2EFED;
+}
+
+.fq-statistics i {
+	font-size: 24px;
+	color: #F36E32;
+}
+
+.fq-balance-num{
+	color:#EE6720;
+	border-bottom:1px solid #F2EFED;
+}
+
+.fq-balance-num a{
+	position:absolute;
+	right:1rem;
+	line-height:26px;
+	color:#EE6720;
+	border:#EE6720 1px solid;
+	border-radius:4px;
+}
+
+/*.fq-notice .am-scrollable-vertical img{
+	width: 100%;
+}*/
