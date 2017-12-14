@@ -1,0 +1,34 @@
+
+@font-face {font-family: "iconfont";
+  src: url('../font/font_p0vqjir6qjg4lsor.eot?t=1493016475496'); /* IE9*/
+  src: url('../font/font_p0vqjir6qjg4lsor.eot?t=1493016475496#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../font/font_p0vqjir6qjg4lsor.woff?t=1493016475496') format('woff'), /* chrome, firefox */
+  url('../font/font_p0vqjir6qjg4lsor.ttf?t=1493016475496') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../font/font_p0vqjir6qjg4lsor.svg?t=1493016475496#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-tishi:before { content: "\e64d"; }
+
+.icon-tishi1:before { content: "\e6b3"; }
+
+.icon-tishi2:before { content: "\e646"; }
+
+.icon-tishi3:before { content: "\e62d"; }
+
+.icon-tishi4:before { content: "\e614"; }
+
+.icon-tishi5:before { content: "\e7bd"; }
+
+.icon-tishi6:before { content: "\e6d3"; }
+
+.icon-tishi7:before { content: "\e621"; }
+
+.icon-tishi8:before { content: "\e605"; }
